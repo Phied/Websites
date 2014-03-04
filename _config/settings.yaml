@@ -28,10 +28,10 @@ _site_name: Another Awesome Statamic Site
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://perkinsblog.net
+_site_url: http://perkinsblog.net/
 
 # Folder name of your desired theme
-_theme: acadia
+_theme: denali
 
 # Entries should include timestamp YYYY-MM-DD-HHII
 _entry_timestamps: false
