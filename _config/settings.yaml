@@ -31,7 +31,7 @@ _content_root: _content
 _site_url: http://perkinsblog.net/
 
 # Folder name of your desired theme
-_theme: denali
+_theme: statarkers
 
 # Entries should include timestamp YYYY-MM-DD-HHII
 _entry_timestamps: false
