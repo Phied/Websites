@@ -1,4 +1,7 @@
 _cache/
+
+_cache/*
+
 _cache/_app/content/content.php
 
 _cache/_app/content/content.php
