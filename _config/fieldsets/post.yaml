@@ -1,10 +1,17 @@
 fields:
   categories:
-    display: Categories
+    display: categories
     required: false
     default:
     type: tags
+
   content:
+    type: redactor
+
+  excerpt:
+    display: Blog Entry Excerpt
+    required: true
+    default:
     type: redactor
 
 hide: true

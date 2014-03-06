@@ -503,11 +503,15 @@ div p {
   line-height: 1.6;
 }
 
-p.article__date, p.article__tax, p.article__more{
+p.article__date, p.article__author, p.article__tax, p.article__more{
   color: #777;
   text-transform: uppercase;
   white-space: nowrap;
   font-size: 11px;
+}
+
+p.article__date{
+text-align: right;
 }
 
 div.article__text {
@@ -523,8 +527,27 @@ ol.articleList {
   padding: 0;
   list-style: none;
 }
+
+/* the actual full article text page */
+h2.article__heading {
+  
+}
+
+hr {
+  border: solid #DDDDDD;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25em 0 1.2em;
+  height: 0;
+}
 @media all and (max-width: 27em) {
   /* line 11, ../sass/_states.scss */
   body {
     -webkit-font-smoothing: antialiased;
     font-size: 0.875em; } }
+
+/* Custom Font-Awesome */
+i.fa-chevron-circle-right {
+  color: orange;
+  margin-left: -2.5%;
+}

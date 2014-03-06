@@ -22,7 +22,7 @@ _site_root: /
 #_site_root: /~keith/
 
 # Name of your site
-_site_name: Another Awesome Statamic Site
+_site_name: Another Awesome Statamic Website
 
 # Change the folder name for your content directory
 _content_root: _content
@@ -45,10 +45,9 @@ _time_format: 'g:i.s a'
 # Timezone
 _timezone: America/New_York
 
-# List of desired taxonomy triggers
+# List of desired taxonomy triggers default category and tags
 _taxonomy:
-  - categories
-  - tags
+  - author
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
 _taxonomy_slugify: false

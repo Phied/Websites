@@ -1,10 +1,14 @@
 ---
 title: The Great Wilderness
+author:
+  - firstname: keith
 categories:
   - appendages
   - wilderness
   - survival
   - cold
+excerpt: |
+	<p>The last several months have been a hallowing and trying experience. I lost another toe this winter. Seven still remain, faithful friends as they are. This wilderness in which I've become accustom is unforgiving as my father; as cold as my mother.</p>
 ---
 The last several months have been a hallowing and trying experience. I lost another toe this winter. Seven still remain, faithful friends as they are. This wilderness in which I've become accustom is unforgiving as my father; as cold as my mother.
 

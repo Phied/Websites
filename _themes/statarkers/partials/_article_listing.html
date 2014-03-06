@@ -12,33 +12,34 @@
     {{ endif }}
       <li class="articleList__item">
         <article class="article">
-          <h3><a href="{{ url }}">{{ title }}</a></h3>
+          <h3><a href="{{ url }}"><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;{{ title }}</a></h3>
           
           {{ if author || date || categories_list || tags_list }}
           <div class="article__meta">
 
+           {{# To be sure that my author isn't listed here on the listings.
             {{ if author|not_empty }}
             {{ member:profile member="{author}" }}
             <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p>
             {{ /member:profile }}
-            {{ endif }}
+            {{ endif }}   #}}
 
             {{ if date }}
-            <p class="article__date">Posted on: <time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
+            <p class="article__date"><i class="fa fa-calendar"></i>&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
             {{ endif }}
             
-            <div class="article__text"> {{ content|widont }} </div>
+            <div class="article__text"> {{ excerpt|widont }} </div> {{# Used to be content|widont #}}
 
             {{ if categories_list && tags_list }}
-            <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
+            <p class="article__tax"> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
             {{ endif }}
 
             {{ if categories_list && !tags_list }}
-            <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
+            <p class="article__tax"> {{ categories_url_list }}</p>
             {{ endif }}
 
             {{ if !categories_list && tags_list }}
-            <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
+            <p class="article__tax"> {{ tags_url_list }}</p>
             {{ endif }}
 
           </div><!-- END .article__meta -->

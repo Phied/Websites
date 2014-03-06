@@ -1,7 +1,15 @@
 ---
 title: A Warm Thought on a Cold Night
+author:
+	-firstname: keith
 categories:
   - wilderness
   - cold
+excerpt: |
+  <p>
+  	&gt; Were I to die tonight, I'd be more of a man tomorrow.
+  </p>
 ---
-> Were I to die tonight, I'd be more of a man tomorrow.
+<p>
+	&gt; Were I to die tonight, I'd be more of a man tomorrow.
+</p>
