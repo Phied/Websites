@@ -389,10 +389,10 @@ a {
   color: #555; /*gets the small links*/ 
   text-decoration: none;}
   h1 a:hover{ /* Fix title color change */
-    color: #555;
+    color: #E67E22;
   }
   h3 a:hover{ /* Fix for changing color for article titles */
-    color: orange;
+    color: #E67E22;
   }
   /* These will modify any links other than those listed above. */
   /* line 18, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
@@ -424,6 +424,28 @@ header[role="banner"] {
   width: 100%;
   padding: 2em 0; }
 
+/* Modify my banner text */
+h1.logo {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+  color: #FF6600;
+}
+
+h1 a {
+  color: #E67E22;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+/* Modify my strap-line text (below the banner) */
+h2.strap-line {
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 3px #000000;
+  letter-spacing: 2px;
+  margin-bottom: 55px;
+}
 /* line 18, ../sass/_layout.scss */
 footer[role="contentinfo"] {
   background: #DDDDDD;
@@ -438,6 +460,7 @@ footer[role="contentinfo"] {
 nav.nav {
 
 }
+
 #home-button {
   height: 75px;
   text-indent: -9999px;
@@ -447,7 +470,7 @@ nav.nav {
   width: 75px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 75px #FFFFFF;
+  border-radius: 75px;
   -webkit-border-radius: 75px;
   -moz-border-radius: 75px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
@@ -462,7 +485,7 @@ section[role="main"] {
   font-size: 22px;
   line-height: 1.6;
   text-align: center;
-  margin: 30px 0 10px;
+  margin: 40px 0 10px;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
@@ -510,6 +533,11 @@ p.article__date, p.article__author, p.article__tax, p.article__more{
   font-size: 11px;
 }
 
+.article__main a:link, .article__text a:link{
+  color: #E67E22;
+  text-decoration: underline;
+}
+
 p.article__date{
 text-align: right;
 }
@@ -548,6 +576,16 @@ hr {
 
 /* Custom Font-Awesome */
 i.fa-chevron-circle-right {
-  color: orange;
+  color: #E67E22;
   margin-left: -2.5%;
+}
+
+i.fa-comments {
+  font-size: 1.5em;
+  color: #777777;
+}
+
+i.fa-home, i.fa-envelope, i.fa-twitter-square {
+  font-size: 1.5em;
+  color: #555555;
 }

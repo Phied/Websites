@@ -13,5 +13,8 @@ fields:
     required: true
     default:
     type: redactor
+  author:
+    display: Author
+    type: users
 
 hide: true
