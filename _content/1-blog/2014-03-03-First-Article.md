@@ -1,7 +1,6 @@
 ---
 title: My First Article
-author:
-  - firstname: keith
+author: keith
 categories:
   - Themes
   - Statamatic

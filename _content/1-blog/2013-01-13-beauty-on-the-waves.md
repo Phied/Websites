@@ -1,7 +1,6 @@
 ---
 title: Beauty on the Waves
-author:
-  firstname: keith
+author: keith
 categories:
   - survival
   - wilderness

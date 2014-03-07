@@ -1,7 +1,6 @@
 ---
 title: A Warm Thought on a Cold Night
-author:
-	-firstname: keith
+author: keith
 categories:
   - wilderness
   - cold
