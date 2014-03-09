@@ -18,11 +18,11 @@ _license_key: 9702a76b-4563-48fe-bb47-d9bc52417d3b
 _language: en
 
 # Change if you are running Statamic in a subdirectory
-_site_root: /
-#_site_root: /~keith/
+#_site_root: /
+_site_root: /~keith/
 
 # Name of your site
-_site_name: The Thoughts of Keith Perkins
+_site_name: Perkinsblog [dot] net
 
 # Change the folder name for your content directory
 _content_root: _content

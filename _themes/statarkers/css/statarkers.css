@@ -419,7 +419,8 @@ a {
 /* line 17, ../sass/_layout.scss */
 header[role="banner"] {
   color: #FFFFFF;  /* This got my tag under the title */
-  background: #DDDDDD url(../img/shoes_header.png) left center no-repeat;
+  /* background: #DDDDDD url(../img/shoes_header.png) left center no-repeat; */
+  background: #DDDDDD url(http://farm3.staticflickr.com/2661/13037281323_f2a92fe43e_o.png) left center no-repeat;
   height: 200px;
   width: 100%;
   padding: 2em 0; }
@@ -465,7 +466,8 @@ nav.nav {
   height: 75px;
   text-indent: -9999px;
   vertical-align: middle;
-  background: transparent url(../img/profilepic.png) no-repeat;
+  /*background: transparent url(../img/profilepic.png) no-repeat;*/
+  background: transparent url(http://farm3.staticflickr.com/2380/13037451414_f78478b8c4_o.png) no-repeat;
   display: block;
   width: 75px;
   margin-left: auto;
@@ -482,9 +484,9 @@ section[role="main"] {
   color: #555;
   width: 640px;
   text-rendering: optimizeLegibility;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.6;
-  text-align: center;
+  text-align: justify;
   margin: 40px 0 10px;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
