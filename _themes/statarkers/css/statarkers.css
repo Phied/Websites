@@ -484,7 +484,7 @@ section[role="main"] {
   color: #555;
   width: 640px;
   text-rendering: optimizeLegibility;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.6;
   text-align: justify;
   margin: 40px 0 10px;
@@ -558,6 +558,11 @@ ol.articleList {
   list-style: none;
 }
 
+ul.error {
+  list-style: none;
+  font-variant: small-caps;
+}
+
 /* the actual full article text page */
 h2.article__heading {
   
@@ -590,4 +595,72 @@ i.fa-comments {
 i.fa-home, i.fa-envelope, i.fa-twitter-square {
   font-size: 1.5em;
   color: #555555;
+}
+
+/* Contact Form CSS */
+.submitbutton {
+
+}
+div.contact-field {
+  padding-bottom: 20px;
+}
+div.block {
+  text-align: center;
+}
+label {
+  display:none;
+}
+input {
+  height: 55px;
+}
+textarea{
+  padding-top: 13px;
+}
+input, textarea {
+  outline: none;
+  width: 100%;
+  margin: 0 0 0 0;
+  font-size: 18px;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  border: 1px solid #EEEEEE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -moz-box-shadow: inset 0 0 3px #EEEEEE;
+  -webkit-box-shadow: inset 0 0 3px #EEEEEE;
+  padding-left: 13px;
+  padding-right: 13px;
+  -webkit-transition: .2s ease-in-out;
+    -webkit-transition-property: initial;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transition-delay: initial;
+  -moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+    transition-property: initial;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  color: #E67E22;
+}
+
+.fa-input {
+    font-family: FontAwesome, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background: #222;
+    background-color: #E67E22;
+    color: #FFF;
+    text-decoration: none;
+    line-height: 1;
+    font-weight: bold;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    padding: 8px 14px 9px;
+    font-size: 14px;
 }
