@@ -411,15 +411,17 @@ a {
   box-sizing: border-box; }
 
 /* line 12, ../sass/_layout.scss */
+
+}
 .container {
   margin: 0 auto;
   padding: 0 1em;
-  max-width: 40em; }
+  max-width: 40em;
+  }
 
 /* line 17, ../sass/_layout.scss */
 header[role="banner"] {
   color: #FFFFFF;  /* This got my tag under the title */
-  /* background: #DDDDDD url(../img/shoes_header.png) left center no-repeat; */
   background: #DDDDDD url(http://farm3.staticflickr.com/2661/13037281323_f2a92fe43e_o.png) left center no-repeat;
   height: 200px;
   width: 100%;
@@ -445,7 +447,7 @@ h2.strap-line {
   text-align: center;
   text-shadow: 1px 1px 3px #000000;
   letter-spacing: 2px;
-  margin-bottom: 55px;
+  margin-bottom: 4em;
 }
 /* line 18, ../sass/_layout.scss */
 footer[role="contentinfo"] {
@@ -461,6 +463,9 @@ footer[role="contentinfo"] {
 nav.nav {
 
 }
+a#home-button, a#contact-button, a#running-button {
+  display: inline-block;
+}
 
 #home-button {
   height: 75px;
@@ -468,17 +473,53 @@ nav.nav {
   vertical-align: middle;
   /*background: transparent url(../img/profilepic.png) no-repeat;*/
   background: transparent url(http://farm3.staticflickr.com/2380/13037451414_f78478b8c4_o.png) no-repeat;
-  display: block;
   width: 75px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 75px;
   -webkit-border-radius: 75px;
   -moz-border-radius: 75px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 1);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+  margin-left: 30px;
+  margin-right: 30px;
 }
+#running-button {
+  height: 43px;
+  color: #2c3e50;
+  font-size: 40px;
+  font-family: FontAwesome, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  vertical-align: middle;
+  /*background: transparent url(../img/profilepic.png) no-repeat;*/
+  width: 50px;
+  background: #E67E22;
+  text-shadow: 1px 1px 3px #000000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+#contact-button {
+  height: 43px;
+  background: #E67E22;
+  color: #2c3e50;
+  font-family: FontAwesome, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  vertical-align: middle;
+  font-size: 40px;
+  /*background: transparent url(../img/profilepic.png) no-repeat;*/
+  width: 50px;
+  border-radius: 60px;
+  text-shadow: 1px 1px 3px #000000;
+  -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
 /* Added for articlelist items */
 section[role="main"] {
   color: #555;
@@ -487,13 +528,25 @@ section[role="main"] {
   font-size: 17px;
   line-height: 1.6;
   text-align: justify;
-  margin: 40px 0 10px;
+  /* margin: 40px 0 10px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5em;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 section.articles {
   vertical-align: middle;
   width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.nav__list {
+  list-style: none;
+}
+li.nav__listItem {
+  text-align: center;
 }
 
 li.articleList__item {
@@ -501,12 +554,11 @@ li.articleList__item {
   border: .1em solid #CCCCCC;
   margin-top: 0.9em;
   margin-bottom: 0.9em;
-  
 }
 
 article.article{
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 2em;
+  padding-right: 1em;
   width: 620px;
 
 }
@@ -664,3 +716,134 @@ input, textarea {
     padding: 8px 14px 9px;
     font-size: 14px;
 }
+
+/* iPhone 5s screen layout */
+@media only screen and (min-device-width: 320px) and (max-device-width:568px) {
+/* Both portrait and landscape */
+
+section[role="main"] {
+  /* display: none; This fixes my issue of my quote text showing up on mobile, but I lose my articles.  Find another fix.  Try adding a quote div to a partial file */
+  width: 95%;
+}
+
+section.articles {
+  width: 95%;
+}
+
+article.article {
+  width: 95%;
+}
+
+h2.strap-line {
+  margin: 0 0 0 0;
+}
+
+header[role="banner"] {
+  padding: .2em 0;
+  background: #555555;
+  height: 7.6em;
+}
+
+li.nav__listItem {
+  text-align: left;
+  text-indent: -4em;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#home-button {
+  background: transparent;
+  text-indent: 0px;
+  height: 2.5em;
+  text-align: center;
+  font-family: FontAwesome, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  background: #222;
+  background-color: #E67E22;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: relative;
+  cursor: pointer;
+  padding: 8px 14px 9px;
+  font-size: 14px;
+}
+
+#contact-button {
+  background: transparent;
+  text-indent: 0px;
+  height: 2.5em;
+  text-align: center;
+  font-family: FontAwesome, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  background: #222;
+  background-color: #E67E22;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: relative;
+  cursor: pointer;
+  padding: 8px 14px 9px;
+  font-size: 14px;
+}
+
+#running-button {
+  background: transparent;
+  text-indent: 0px;
+  height: 2.5em;
+  text-align: center;
+  font-family: FontAwesome, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  background: #222;
+  background-color: #E67E22;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: relative;
+  cursor: pointer;
+  padding: 8px 14px 9px;
+  font-size: 14px;
+}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+
+h2.strap-line {
+  font-size: 10px;
+}
+
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+
+h1.logo {
+  font-size: 20px;
+}
+
+h2.strap-line {
+  font-size: 8px;
+}
+
+
+ }
