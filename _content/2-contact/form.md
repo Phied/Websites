@@ -39,7 +39,7 @@
             <input type="text" name="subject" id="subject" placeholder="Subject"></input>
         </div>
         <!-- Added next field for the annoying bots -->
-        <input type="text" name="_email" required />
+        <input style="display:none;" type="text" name="_email" required />
         <div class="contact-field">
             <label>Message<span class="required">*</span></label>
             <textarea name="message" id="message" placeholder="Hi there, Keith!" class="required" rows="20" cols="20"></textarea>
