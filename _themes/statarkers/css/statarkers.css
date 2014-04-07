@@ -726,6 +726,10 @@ section[role="main"] {
   width: 95%;
 }
 
+section[role="greeting"] {
+  display: none;
+}
+
 section.articles {
   width: 95%;
 }

@@ -94,6 +94,11 @@ class Plugin_email_form extends Plugin {
       $this->validation[0]['error'] = 'Email is required';
     }
 
+    // Check for bots, field should be hidden
+    if (isset($input['_email'])) {
+      $this->validation[]['error'] = "Go away robots!!";
+    }
+    
     // Username is never required
     if (isset($input['username']) && $input['username'] !== '' ) {
       $this->validation[]['error'] = 'Username is never required';
