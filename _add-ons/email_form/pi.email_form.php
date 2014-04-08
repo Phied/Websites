@@ -51,7 +51,7 @@ class Plugin_email_form extends Plugin {
     }
 
     // Display the form on the page.
-    $output .= '<form method="post"';
+    $output .= '<form method="post" novalidate';
 
     if( $options['class'] != '') {
       $output .= ' class="' . $options['class'] . '"';
@@ -95,10 +95,10 @@ class Plugin_email_form extends Plugin {
     }
 
     // Check for bots, field should be hidden
-    if (isset($input['_email'])) {
-      $this->validation[]['error'] = "Go away robots!!";
+    if (! empty($input['_email'])) {
+      $this->validation[0]['error'] = "Go away robots!!";
     }
-    
+
     // Username is never required
     if (isset($input['username']) && $input['username'] !== '' ) {
       $this->validation[]['error'] = 'Username is never required';
