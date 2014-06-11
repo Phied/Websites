@@ -419,6 +419,78 @@ a {
   max-width: 40em;
   }
 
+/* My custom table goes here */
+.custom_table {
+  font-size: .9em;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.5em;
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.custom_table caption {
+  font-variant: small-caps;
+  background-color: #e67e22;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.custom_table th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+}
+
+.custom_table td {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.custom_table td, .custom_table th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.custom_table tr:nth-child(odd) {
+  /* background-color: #7f8c8d; */
+}
+
+/* Background-color of the even rows */
+.custom_table tr:nth-child(even) {
+ /*background-color: #95a5a6; */
+}
+
+.custom_table thead tr:last-child th {
+  border-bottom: 2px solid #dddddd;
+}
+
+.custom_table tr:last-child td {
+  border: none;
+}
+
+.custom_table td {
+  border-bottom: 1px solid #dddddd;
+}
+
+.custom_table tfoot {
+  border-top: 2px solid #DDDDDD;
+  background-color: #e67e22;
+  color: white;
+  font-variant: small-caps;
+  text-align: center;
+  font-size: .9em;
+  font-weight: bold;
+}
+.custom_table tr:hover {
+  background-color: #F0FBFF;
+}
+
 /* line 17, ../sass/_layout.scss */
 header[role="banner"] {
   color: #FFFFFF;  /* This got my tag under the title */
