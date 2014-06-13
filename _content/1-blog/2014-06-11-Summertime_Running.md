@@ -62,7 +62,7 @@ I'm fairly certain that this is my number one cause of the running slowdown.  I 
 	<tr>
 		<td>85&deg;F</td>
 		<td>9:31 min/mi</td>
-		<td>18-20% incrase</td>
+		<td>18-20% increase</td>
 	</tr>
 	<tr>
 		<td>Over 85&deg;F</td>
