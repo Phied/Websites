@@ -13,7 +13,7 @@
 
       {{ if author|not_empty && date}}
       {{ member:profile member="{{author}}" }}
-      <p class="article__author"> {{ first_name }} {{ last_name }} &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-comments"></i>&nbsp;&nbsp;<a href="{{ permalink }}#disqus_thread"></a>&nbsp;&nbsp;•&nbsp;&nbsp;<a href="http://twitter.com/share?url={{ permalink }}&text={{ title }}&via=keithaperkins" target="_blank"><i class="fa fa-twitter-square"></i></a></p>
+      <p class="article__author"> {{ first_name }} {{ last_name }} &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time> <!-- &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-comments"></i>&nbsp;&nbsp;<a href="{{ permalink }}#disqus_thread"></a>&nbsp;&nbsp;•&nbsp;&nbsp;<a href="http://twitter.com/share?url={{ permalink }}&text={{ title }}&via=keithaperkins" target="_blank"><i class="fa fa-twitter-square"></i></a> --></p>
       {{ /member:profile }}
       {{ endif }}
 
@@ -60,6 +60,41 @@
     <a href="/">&larr; back</a>
   </footer>
 </article> #}}
+
+<!-- Imbed social icons here.  First is twitter.  Unfortunately, I had to use the javascript... -->
+<ul class="social">
+<!-- Twitter -->
+<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ permalink }}" data-via="keithaperkins" data-lang="en">Tweet</a></li>
+
+<!-- Facebook Like -->
+<li><div class="fb-like" data-href="{{ permalink }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+
+<!-- Place this tag where you want the +1 button to render. -->
+<li><div class="g-plusone" data-size="medium"></div></li>
+
+
+</ul>
+<!-- Twitter Script -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Facebook Script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=198872863516638&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Google Plus Script -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 
 <hr>
 
