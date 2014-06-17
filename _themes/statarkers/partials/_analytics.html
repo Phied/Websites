@@ -7,7 +7,7 @@
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
   
@@ -23,6 +23,9 @@ Enter your Google analytics code here, you can just enter your account id here U
 The analytics is wrapped in a conditional which will stop google tracker your site when
 on a development server. You will need to uncomment the enable_analytics variables in the 
 dev and live yaml files. These are located in the environments folder which is located in the _config folder.
+
+The old line
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 
 Once this is in place you can set up your eviroments in the settings.yaml file located in the _config folder.
 For more information see: http://statamic.com/learn/advanced-features/environments.
