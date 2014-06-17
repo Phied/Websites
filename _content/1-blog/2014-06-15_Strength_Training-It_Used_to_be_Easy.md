@@ -1,8 +1,13 @@
 ---
 title: Strength Training - It Used to be Easy
 author: keith
+gplus_profile: https://www.google.com/+KeithPerkins1
+twitter_profile: https://www.twitter.com/keithaperkins
+{{# url_image: uncomment this and insert link to a picture #}} 
 categories:
   - Training
+keywords: "Strength Training, Running, high school, college, six pack abs"
+meta_desc: "The importance of strength training, and how much I struggle with it."
 excerpt: |
   <p> One of my biggest weaknesses when it comes to running is the lack of strength training.  To be honest, even in high school and college I never really cared for it very much.  When I had a coach, it was always something I made sure to do.  I grumbled a bit about it, but I always did what my coach set before me.  Was it fear of him finding out I was slacking?  It's very hard to say, but eventually it became part of the pre-workout ritual.  To be honest, I did notice a difference with my running when I was doing my required exercises.  </p>
 

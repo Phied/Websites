@@ -607,6 +607,10 @@ section[role="main"] {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
+section[role="greeting"] {
+  text-align: center;
+}
+
 section.articles {
   vertical-align: middle;
   width: 640px;
@@ -693,7 +697,7 @@ ul.error {
 
 /* the actual full article text page */
 h2.article__heading {
-  
+  text-align: center;
 }
 
 hr {

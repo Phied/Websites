@@ -1,9 +1,14 @@
 ---
 title: Garmin 620 Issues
 author: keith
+gplus_profile: https://www.google.com/+KeithPerkins1
+twitter_profile: https://www.twitter.com/keithaperkins
+{{# url_image: uncomment this and insert link to a picture #}} 
 categories:
   - technology
   - garmin
+keywords: "Garmin, bugs, Wifi, Charge, GPS, Issues, 620, Master Reset"
+meta_desc: "Some common issues that have been associated with the 620, and how to fix them."
 excerpt: |
   <p>
   	I ended up getting a brand new Garmin 620 at the beginning of this year (2014).  The watch itself is pretty incredible, yet buggy at times.  So far, I have found a couple of issues with it, although I have been able to solve them.  I really wish that Garmin had fixed the issues I'd run into before releasing this watch.
