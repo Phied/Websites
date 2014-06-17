@@ -1,4 +1,6 @@
 <?php
+
+use \erusev\ParsedownExtra;
 use \Michelf\MarkdownExtra;
 use \Michelf\SmartyPants;
 use \Michelf\SmartyPantsTypographer;
@@ -16,6 +18,8 @@ use Netcarver\Textile\Parser as Textile;
  */
 class Parse
 {
+    private static $parsers = array();
+    
     /**
      * Parse a block of YAML into PHP
      *
@@ -35,16 +39,39 @@ class Parse
      */
     public static function markdown($string)
     {
-        $parser = new MarkdownExtra;
+        // start measuring
+        $hash = Debug::markStart('markdown');
         
-        $parser->no_markup         = Config::get('markdown:no_markup', false);
-        $parser->no_entities       = Config::get('markdown:no_entities', false);
-        $parser->predef_urls       = Config::get('markdown:predefined_urls', array());
-        $parser->predef_abbr       = Config::get('markdown:predefined_abbreviations', array());
-        $parser->code_class_prefix = Config::get('markdown:code_class_prefix', '');
-        $parser->code_attr_on_pre  = Config::get('markdown:code_attr_on_pre', false);
+        // check for parser, create if needed
+        if (!isset(self::$parsers['markdown'])) {
+            if (strtolower(Config::get('markdown_parser', 'standard')) === "parsedown") {
+                self::$parsers['markdown'] = new ParsedownExtra();
+            } else {
+                $parser = new MarkdownExtra;
 
-        return $parser->transform($string);
+                $parser->no_markup         = Config::get('markdown:no_markup', false);
+                $parser->no_entities       = Config::get('markdown:no_entities', false);
+                $parser->predef_urls       = Config::get('markdown:predefined_urls', array());
+                $parser->predef_abbr       = Config::get('markdown:predefined_abbreviations', array());
+                $parser->code_class_prefix = Config::get('markdown:code_class_prefix', '');
+                $parser->code_attr_on_pre  = Config::get('markdown:code_attr_on_pre', false);
+
+                self::$parsers['markdown'] = $parser;
+            }
+        }
+
+        // parse for markdown
+        if (strtolower(Config::get('markdown_parser', 'standard')) === "parsedown") {
+            $result = self::$parsers['markdown']->text($string);
+        } else {
+            $result = self::$parsers['markdown']->transform($string);
+        }
+        
+        // end measuring
+        Debug::markEnd($hash);
+        Debug::increment('parses', 'markdown');
+        
+        return $result;
     }
 
     /**
@@ -55,8 +82,17 @@ class Parse
      */
     public static function textile($string)
     {
+        // start measuring
+        $hash = Debug::markStart('textile');
+        
         $parser = new Textile();
-        return $parser->textileThis($string);
+        $result = $parser->textileThis($string);
+
+        // end measuring
+        Debug::markEnd($hash);
+        Debug::increment('parses', 'textile');
+        
+        return $result;
     }
 
     /**
@@ -67,13 +103,20 @@ class Parse
      */
     public static function smartypants($string)
     {
-        $typographer = (Config::get('enable_smartypants', TRUE) === 'typographer');
+        // start measuring
+        $hash = Debug::markStart('smartypants');
 
-        if ($typographer) {
-            return SmartyPantsTypographer::defaultTransform($string);
+        if (Config::get('enable_smartypants', true) === 'typographer') {            
+            $result = SmartyPantsTypographer::defaultTransform($string);
+        } else {
+            $result = SmartyPants::defaultTransform($string);
         }
 
-        return SmartyPants::defaultTransform($string);
+        // end measuring
+        Debug::markEnd($hash);
+        Debug::increment('parses', 'smartypants');
+        
+        return $result;
     }
 
 
@@ -88,11 +131,23 @@ class Parse
      */
     public static function template($html, $variables, $callback = array('statamic_view', 'callback'), $context=array())
     {
-        $parser = new \Lex\Parser();
-        $parser->cumulativeNoparse(TRUE);
-        $allow_php = Config::get('_allow_php', false);
+        // start measuring
+        $hash = Debug::markStart('statamic_template');
+        
+        if (!isset(self::$parsers['template_parser'])) {
+            $parser = new \Lex\Parser();
+            $parser->cumulativeNoparse(TRUE);
 
-        return $parser->parse($html, ($context + $variables), $callback, $allow_php);
+            self::$parsers['template_parser'] = $parser;
+        }
+        
+        $result = self::$parsers['template_parser']->parse($html, ($variables + $context), $callback, Config::get('_allow_php', false));
+
+        // end measuring
+        Debug::markEnd($hash);
+        Debug::increment('parses', 'statamic_template');
+        
+        return $result;
     }
 
 
@@ -117,33 +172,33 @@ class Parse
      * @param string  $content  Template for replacing
      * @param array  $data  Array of arrays containing values
      * @param bool  $supplement  Supplement each loop with contextual information?
+     * @param array  $context  Contextual data to add into loop
      * @return string
      */
-    public static function tagLoop($content, $data, $supplement = false)
+    public static function tagLoop($content, $data, $supplement = false, $context=array())
     {
         $output = '';
 
         if ($supplement) {
-
             // loop through each record of $data
             $i = 1;
             $count = count($data);
-
+            
             foreach ($data as $item) {
                 $item['first']         = ($i === 1);
                 $item['last']          = ($i === $count);
                 $item['index']         = $i;
                 $item['zero_index']    = $i - 1;
                 $item['total_results'] = $count;
-
-                $output .= Parse::template($content, $item);
+                
+                $output .= Parse::contextualTemplate($content, $item, $context);
 
                 $i++;
             }
 
         } else {
             foreach ($data as $item) {
-                $output .= Parse::template($content, $item);
+                $output .= Parse::contextualTemplate($content, $item, $context, array('statamic_view', 'callback'));
             }
         }
 
@@ -159,13 +214,21 @@ class Parse
      */
     public static function conditions($conditions)
     {
+        // start measuring
+        $hash = Debug::markStart('conditions');
+        Debug::increment('parses', 'condition_statements');
+        
         $conditions = explode(",", $conditions);
         $output = array();
 
         foreach ($conditions as $condition) {
+            Debug::increment('parses', 'conditions');
             $result = Parse::condition($condition);
             $output[$result['key']] = $result['value'];
         }
+
+        // end measuring
+        Debug::markEnd($hash);
 
         return $output;
     }
@@ -245,6 +308,18 @@ class Parse
                     "kind" => "comparison",
                     "type" => "not equal",
                     "value" => substr($value, 4)
+                );
+            } elseif (substr($value, 0, 1) == "!") {
+                $item = array(
+                    "kind" => "comparison",
+                    "type" => "not equal",
+                    "value" => substr($value, 1)
+                );
+            } elseif (substr($value, 0, 2) == "! ") {
+                $item = array(
+                    "kind" => "comparison",
+                    "type" => "not equal",
+                    "value" => substr($value, 2)
                 );
             } elseif (substr($value, 0, 2) == "<=") {
                 // less than or equal to

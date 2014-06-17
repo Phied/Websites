@@ -171,6 +171,7 @@ class Plugin_location extends Plugin {
         $html .= ' box_zoom: ' . $settings['interaction_box_zoom'] . ',';
         $html .= ' touch_zoom: ' . $settings['interaction_touch_zoom'] . ',';
         $html .= ' draggable: ' . $settings['interaction_draggable'] . ',';
+        $html .= ' tap: ' . $settings['interaction_tap'] . ',';
         $html .= ' open_popup: ' . $settings['open_popup'] . ',';
         $html .= ' auto_center: ' . $settings['auto_center'] . '};';
 
@@ -240,6 +241,7 @@ class Plugin_location extends Plugin {
             'interaction_box_zoom'          => ($this->fetch('interaction_box_zoom', true, null, true)) ? 'true' : 'false',
             'interaction_touch_zoom'        => ($this->fetch('interaction_touch_zoom', true, null, true)) ? 'true' : 'false',
             'interaction_draggable'         => ($this->fetch('interaction_draggable', true, null, true)) ? 'true' : 'false',
+            'interaction_tap'               => ($this->fetch('interaction_tap', true, null, true)) ? 'true' : 'false',
             'open_popup'                    => ($this->fetchParam('open_popup', false, null, true)) ? 'true' : 'false',
             'auto_center'                   => ($this->fetch('auto_center', true, null, true)) ? 'true' : 'false',
             
@@ -387,12 +389,12 @@ class Plugin_location extends Plugin {
 
         return '
             <!-- leaflet maps -->
-            <link rel="stylesheet" href="' . $add_on_path . '/css/leaflet.css">
+            <link rel="stylesheet" href="' . ENVIRONMENT_PATH_PREFIX . $add_on_path . '/css/leaflet.css">
             <!--[if lte IE 8]>
-                <link rel="stylesheet" href="' . $add_on_path . '/css/leaflet.ie.css">
+                <link rel="stylesheet" href="' . ENVIRONMENT_PATH_PREFIX . $add_on_path . '/css/leaflet.ie.css">
             <![endif]-->
             ' . $override . '
-            <script type="text/javascript" src="' . $add_on_path . '/js/leaflet.js"></script>
+            <script type="text/javascript" src="' . ENVIRONMENT_PATH_PREFIX . $add_on_path . '/js/leaflet.js"></script>
             <script>
                 try {
                     if (typeof _location_maps !== "object") {
@@ -428,7 +430,8 @@ class Plugin_location extends Plugin {
                             doubleClickZoom: _map.double_click_zoom,
                             boxZoom: _map.box_zoom,
                             touchZoom: _map.touch_zoom,
-                            dragging: _map.draggable
+                            dragging: _map.draggable,
+                            tap: _map.tap
                         });
                         
                         if (bounds) {
