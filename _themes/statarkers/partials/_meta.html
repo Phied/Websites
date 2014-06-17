@@ -3,6 +3,7 @@
 {{ if segment_1 != "404" && segment_1 != "blog" }}
   <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
 
+  <meta name="google-site-verification" content="2aMh7ePx3iUaDM6XgYUQXVVsJYWzvASmXKfmC0XoYcc" />
   {{ if meta_desc|not_empty }}
   <!-- Descriptions - Normal Meta, Open Graph, Twitter -->
   <meta name="description" content="{{ meta_desc|striptags }}" />
