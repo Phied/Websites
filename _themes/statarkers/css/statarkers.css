@@ -824,7 +824,6 @@ input, textarea {
     padding: 8px 14px 9px;
     font-size: 14px;
 }
-
 /* iPhone 5s screen layout */
 @media only screen and (min-device-width: 320px) and (max-device-width:568px) {
 /* Both portrait and landscape */
@@ -957,5 +956,11 @@ h2.strap-line {
   font-size: 8px;
 }
 
-
  }
+/* Print Preview */
+@media print {
+header.header, footer.footer, ul.social, div.comments, h1.logo, h2.strapline, nav.nav {
+    display: none;
+  }
+
+}
