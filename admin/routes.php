@@ -200,7 +200,7 @@ $admin_app->get('/pages', function() use ($admin_app) {
   |
   */
 
-  $pages = Statamic::get_content_tree('/', 1, 1000, false, false, false, false, '/');
+  $pages = Statamic::get_content_tree('/', 1, 1000, false, false, false, true, '/');
 
   // Home page isn't included by default
   $meta = Statamic::get_content_meta("page", '');
@@ -317,6 +317,15 @@ $admin_app->post('/publish', function() use ($admin_app) {
   if ($path) {
     $index_file = false;
     $form_data = Request::post('page');
+
+    // By HTML specifications, browsers are required to canonicalize line breaks
+    // in user input to CR LF (\r\n), and I don’t think any browser gets this wrong.
+    // Reference: clause 17.13.4 Form content types in the HTML 4.01 spec.
+    // Source: http://stackoverflow.com/questions/14217101/what-character-represents-a-new-line-in-a-text-area
+    // Anyway, we want \n for this
+    array_walk_recursive($form_data, function(&$item, $key) {
+      $item = str_replace("\r\n", Config::get('admin_line_endings', "\n"), $item);
+    });
 
     // 1. Validate
     if ($form_data) {
@@ -550,7 +559,7 @@ $admin_app->post('/publish', function() use ($admin_app) {
       if (!preg_match(Pattern::NUMERIC, $slug, $matches)) {
         $slug = $numeric.".".$slug;
       }
-      $file = $content_root."/".$path."/".$slug.".".$content_type;
+      $file = $content_root."/".$path."/".$status_prefix.$slug.".".$content_type;
 
     } elseif ($form_data['type'] == 'none') {
       if (!preg_match(Pattern::NUMERIC, $slug, $matches)) {
@@ -558,7 +567,7 @@ $admin_app->post('/publish', function() use ($admin_app) {
         $slug = $numeric."-".$slug;
       }
         
-      $file = $content_root."/".$path."/".$slug."/page.".$content_type;
+      $file = $content_root."/".$path."/".$status_prefix.$slug."/page.".$content_type;
       $file = Path::tidy($file);
 
       if ( ! File::exists(dirname($file))) {
@@ -769,6 +778,20 @@ $admin_app->post('/publish', function() use ($admin_app) {
     unset($file_data['status']);
   }
 
+  
+  /*
+  |--------------------------------------------------------------------------
+  | Prep data & run hook
+  |--------------------------------------------------------------------------
+  |
+  | Set up an array of useful data for the hook and then run that sucker.
+  |
+  */
+   
+  $publish_data = array('yaml' => $file_data, 'content' => $form_data['content'], 'file' => $file);
+  
+  $publish_data = Hook::run('control_panel', 'publish', 'replace', $publish_data, $publish_data);
+
   /*
   |--------------------------------------------------------------------------
   | Build and write content
@@ -778,7 +801,7 @@ $admin_app->post('/publish', function() use ($admin_app) {
   |
   */
 
-  $file_content = File::buildContent($file_data, $form_data['content']);
+  $file_content = File::buildContent($publish_data['yaml'], $publish_data['content']);
 
   File::put(Path::assemble(BASE_PATH, $file), $file_content);
 
@@ -790,8 +813,6 @@ $admin_app->post('/publish', function() use ($admin_app) {
   | If the slug changed we'll need to rename the file accordingly.
   |
   */
-
-
 
   if ( ! isset($form_data['new'])) {
 
@@ -854,18 +875,17 @@ $admin_app->post('/publish', function() use ($admin_app) {
   |--------------------------------------------------------------------------
   |
   | Pages go back to the tree, entries to their respective Entry Listing
+  | Or, if a custom return was specified, we'll go there.
   |
   */
 
   if ($form_data['type'] == 'none') {
     $app->flash('success', Localization::fetch('page_saved'));
-    $url = $app->urlFor('pages')."?path=".$folder;
-    $app->redirect($url);
   } else {
     $app->flash('success', Localization::fetch('entry_saved'));
-    $url = $app->urlFor('entries')."?path=".$folder;
-    $app->redirect($url);
   }
+
+  $app->redirect(Request::post('return'));
 
 });
 
@@ -881,6 +901,18 @@ $admin_app->map('/delete/entry', function() use ($admin_app) {
 
   foreach ($entries as $path) {
     $file = $content_root . "/" . $path . "." . $content_type;
+
+    /*
+    |--------------------------------------------------------------------------
+    | Delete Hook
+    |--------------------------------------------------------------------------
+    |
+    | Runs the delete hook, passing the file path
+    |
+    */
+
+    Hook::run('control_panel', 'delete', null, $file);
+
     File::delete($file);
   }
 
@@ -890,7 +922,7 @@ $admin_app->map('/delete/entry', function() use ($admin_app) {
     $admin_app->flash('success', Localization::fetch('entry_deleted'));
   }
 
-  $url = $admin_app->urlFor('entries')."?path=".dirname($path);
+  $url = $admin_app->request()->getReferrer();
   $admin_app->redirect($url);
 
 })->name('delete_entry')->via('GET', 'POST');;
@@ -918,8 +950,23 @@ $admin_app->get('/delete/page', function() use ($admin_app) {
     }
 
     if (File::exists($path)) {
+      
+      /*
+      |--------------------------------------------------------------------------
+      | Delete Hook
+      |--------------------------------------------------------------------------
+      |
+      | Runs the delete hook, passing the file path
+      |
+      */
+
+      Hook::run('control_panel', 'delete', null, $path);
+
       File::delete($path);
+
       $admin_app->flash('success', Localization::fetch('page_deleted'));
+
+
     } else {
       $admin_app->flash('failure', Localization::fetch('page_unable_delete'));
     }
@@ -948,7 +995,7 @@ $admin_app->get('/publish', function() use ($admin_app) {
 
     if ($new) {
       $data['new'] = 'true';
-      $page = 'new-slug';
+      $page = '';
       $folder = $path;
 
       $data['full_slug'] = dirname($path);
@@ -1128,19 +1175,15 @@ $admin_app->get('/publish', function() use ($admin_app) {
   unset($data['fields']['status']);
 
   // Content
-  $content_defaults = array('content' => array(
-    'display'      => array_get($data, 'fields:content:display', 'Content'),
-    'type'         => array_get($data, 'fields:content:type', 'markitup'),
-    'field_config' => array_get($data, 'fields:content', array()),
-    'required'     => (array_get($data, 'fields:content:required', false) === true) ? 'required' : '',
-    'instructions' => array_get($data, 'fields:content:instructions', ''),
-    'required'     => array_get($data, 'fields:content:required', false),
-    'input_key'    => ''
-  ));
+  $content_defaults = array_get($data, 'fields:content', array());
+  $content_defaults['display']      = array_get($data, 'fields:content:display', 'Content');
+  $content_defaults['type']         = array_get($data, 'fields:content:type', 'markitup');
+  $content_defaults['required']     = (array_get($data, 'fields:content:required', false) === true) ? 'required' : '';
+  $content_defaults['instructions'] = array_get($data, 'fields:content:instructions', '');
+  $content_defaults['required']     = array_get($data, 'fields:content:required', false);
+  $content_defaults['input_key']    = '';
 
-
-
-  $data['fields'] = array_merge(array_get($data, 'fields', array()), $content_defaults);
+  array_set($data, 'fields:content', $content_defaults);
 
   $data['full_slug'] = Path::tidy($data['full_slug']);
 
@@ -1162,6 +1205,15 @@ $admin_app->get('/publish', function() use ($admin_app) {
  }
 
   if ($new) $data['status_message'] .=  ' ' . Localization::fetch('in', null, true);
+
+  // Set the return URL
+  if ($custom_return = Request::get('return')) {
+    $data['return'] = $app->request()->getRootUri() . $custom_return;
+  } else {
+    $data['return'] = ($data['type'] == 'none')
+                      ? $app->urlFor('pages')."?path=".$folder
+                      : $app->urlFor('entries')."?path=".$folder;
+  }
 
   $data['templates'] = Theme::getTemplates();
   $data['layouts'] = Theme::getLayouts();
@@ -1428,7 +1480,7 @@ $admin_app->get('/system/security', function() use ($admin_app) {
       '_config/settings.yaml'                           => Localization::fetch('security_settings_files'),
       '_config/users/'.$username.'.yaml'                => Localization::fetch('security_user_files'),
       Config::getContentRoot()                          => Localization::fetch('security_content_folder'),
-      Config::getTemplatesPath().'layouts/default.html' => Localization::fetch('security_template_files'),
+      Config::getTemplatesPath().'layouts/default.php'  => Localization::fetch('security_template_files'),
       '_logs'                                           => Localization::fetch('security_logs_folder')
     );
 
@@ -1619,8 +1671,6 @@ $admin_app->get('/system/logs', function() use ($admin_app) {
 
 
 
-
-
 // GET: IMAGES
 // DEPRICATED in 1.3
 // --------------------------------------------------------
@@ -1647,27 +1697,16 @@ $admin_app->get('/images',  function() use ($admin_app) {
 })->name('images');
 
 
+/*
+|--------------------------------------------------------------------------
+| Hook: Add Routes
+|--------------------------------------------------------------------------
+|
+| Allows add-ons to add their own hooks to the control panel.
+|
+*/
 
-
-
-// POST: File Upload
-// --------------------------------------------------------
-$admin_app->post('/file/upload',  function() use ($admin_app) {
-  authenticateForRole('admin');
-  doStatamicVersionCheck($admin_app);
-
-  $file = $_FILES['file']['tmp_name'];
-  $filename = $_FILES['file']['name'];
-  $destination = $admin_app->request()->get('destination');
-
-  File::upload($file, $destination, $filename);
-
-  echo $destination . $filename;
-
-})->name('file_upload');
-
-
-
+Hook::run('control_panel', 'add_routes');
 
 
 
