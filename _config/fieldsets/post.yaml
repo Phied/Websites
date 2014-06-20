@@ -16,5 +16,14 @@ fields:
   author:
     display: Author
     type: users
+  googleprofile:
+    display: Google Plus Proile Link
+    type: Link
+  twitterprofile:
+    display: Twitter Profile Link
+    type: Link
+  imageurllink:
+    display: Picture Link
+    type: Link
 
 hide: true
