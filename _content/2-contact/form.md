@@ -1,94 +1,52 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
+title: Contact Form
+author: keith
+gplus_profile: https://www.google.com/+KeithPerkins1
+twitter_profile: https://www.twitter.com/keithaperkins
+keywords: "contact form, email, message"
+meta_desc: "If you need to contact me, please fill at the form below!"
+exerpt: |
+---
+Wow!
 <!-- Begin Contact Form -->
-
 <div class="block">
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
+  <header><h1>{{ title }}</h1></header>
   {{ email_form subject="Contact Request" to="keithaperkins@gmail.com" required="message"&&"from" }}
-    {{ if error}}
-        <h3>Error</h3>
-        <ul class="error">
-        {{ errors }}
-            <li>{{error}}</li>
-        {{ /errors }}
+  {{ if error}}
+    <h3>Error</h3>
+    <ul class="error">
+    {{ errors }}
+        <li>{{error}}</li>
+    {{ /errors }}
         </ul>
-    {{ endif }}
- 
-    {{ if success }}
-        <h1>Thanks for sending me a message!</h1>
-    {{ else }}
-    <fieldset>
-        <h2>Fill out the form below!</h2>
-        <div class="contact-field">
-            <label for="name">Name:<span class="required">*</span></label>
-            <input type="text" name="name" class="required" id="name" placeholder="Name" />
-        </div>
-        <div class="contact-field">
-            <label>Email<span class="required">*</span></label>
-            <input type="text" name="from" class="required" id="email" placeholder="Email" />
-        </div>
-        <label>Subject</label>
-        <div class="contact-field">
-            <input type="text" name="subject" id="subject" placeholder="Subject"></input>
-        </div>
-        <!-- Added next field for the annoying bots -->
-        <input style="display:none;" type="text" name="_email" required />
-        <div class="contact-field">
-            <label>Message<span class="required">*</span></label>
-            <textarea name="message" id="message" placeholder="Hi there, Keith!" class="required" rows="20" cols="20"></textarea>
-        </div>
-        <input type="submit" class="btn fa-input" value="&#xf003; Stamp it! &#xf003;">
+  {{ endif }}
+  {{ if success }}
+    <h1>Thanks for sending me a message!</h1>
+  {{ else }}
+  <fieldset>
+    <h2>Fill out the form below!</h2>
+    <div class="contact-field">
+        <label for="name">Name:<span class="required">*</span></label>
+        <input type="text" name="name" class="required" id="name" placeholder="Name" />
+    </div>
+    <div class="contact-field">
+        <label>Email<span class="required">*</span></label>
+        <input type="text" name="from" class="required" id="email" placeholder="Email" />
+    </div>
+    <label>Subject</label>
+    <div class="contact-field">
+        <input type="text" name="subject" id="subject" placeholder="Subject"></input>
+    </div>
+    <!-- Added next field for the annoying bots -->
+    <input style="display:none;" type="text" name="_email" required />
+    <div class="contact-field">
+        <label>Message<span class="required">*</span></label>
+        <textarea name="message" id="message" placeholder="Hi there, Keith!" class="required" rows="20" cols="20"></textarea>
+    </div>
+    <input type="submit" class="btn fa-input" value="&#xf003; Stamp it! &#xf003;">
     </fieldset>
     {{ endif }}
-{{ /email_form }}
+    {{ /email_form }}
 </div>
 
 <!-- End contact form -->
