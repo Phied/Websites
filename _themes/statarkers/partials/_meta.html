@@ -13,11 +13,12 @@
 
   {{ if keywords|not_empty }}
   <!-- Default Meta Keywords -->
-  <meta name="keywords" content="{{ keywords }}">
+  <meta name="keywords" content="{{ keywords }}" />
   {{ endif }}
 
-  {{ member:profile member="{{ author }}" }}
-  <!-- Profile Info -->
+  <!-- For some reason I can't close these tags here or I get an error.... -->
+  {{ member:profile member={{ author }}
+  <!-- Profile Link -->
   <link rel="author" content="{{ gplusprofile }}">
   <meta name="twitter:creator" content="{{ twitterprofile }}" />
   <meta name="twitter:site" content="{{ twitterprofile }}">
@@ -52,12 +53,12 @@
 
   {{ if keywords|not_empty }}
   <!-- Default Meta Keywords -->
-  <meta name="keywords" content="{{ keywords }}">
+  <meta name="keywords" content="{{ keywords }}" />
   {{ endif }}
 
   {{ member:profile member="{{ author }}" }}
   <!-- Profile Info -->
-  <link rel="author" content="{{ gplusprofile }}">
+  <link rel="author" content="{{ gplusprofile }}" />
   <meta name="twitter:creator" content="{{ twitterprofile }}" />
   <meta name="twitter:site" content="{{ twitterprofile }}">
   {{ /member:profile }}
