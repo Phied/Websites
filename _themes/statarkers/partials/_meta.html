@@ -16,16 +16,12 @@
   <meta name="keywords" content="{{ keywords }}">
   {{ endif }}
 
-  {{ if gplus_profile|not_empty }}
-  <!-- Google Author -->
-  <link rel="author" content="{{ gplus_profile }}">
-  {{ endif }}
-
-  {{ if twitter_profile|not_empty }}
-  <!-- Twitter Profile -->
-  <meta name="twitter:creator" content="{{ twitter_profile }}" />
-  <meta name="twitter:site" content="{{ twitter_profile }}">
-  {{ endif }}
+  {{ member:profile member="{{ author }}" }}
+  <!-- Profile Info -->
+  <link rel="author" content="{{ gplusprofile }}">
+  <meta name="twitter:creator" content="{{ twitterprofile }}" />
+  <meta name="twitter:site" content="{{ twitterprofile }}">
+  {{ /member:profile }}
 
   {{ if url_image|not_empty }}
   <!-- Meta Image Links: Open Graph (Facebook) and Twitter -->
@@ -59,16 +55,12 @@
   <meta name="keywords" content="{{ keywords }}">
   {{ endif }}
 
-  {{ if gplus_profile|not_empty }}
-  <!-- Google Author -->
-  <link rel="author" content="{{ gplus_profile }}">
-  {{ endif }}
-
-  {{ if twitter_profile|not_empty }}
-  <!-- Twitter Profile -->
-  <meta name="twitter:creator" content="{{ twitter_profile }}" />
-  <meta name="twitter:site" content="{{ twitter_profile }}">
-  {{ endif }}
+  {{ member:profile member="{{ author }}" }}
+  <!-- Profile Info -->
+  <link rel="author" content="{{ gplusprofile }}">
+  <meta name="twitter:creator" content="{{ twitterprofile }}" />
+  <meta name="twitter:site" content="{{ twitterprofile }}">
+  {{ /member:profile }}
 
   {{ if url_image|not_empty  }}
   <!-- Meta Image Links: Open Graph (Facebook) and Twitter -->
