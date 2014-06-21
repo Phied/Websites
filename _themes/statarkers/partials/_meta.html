@@ -1,4 +1,20 @@
 {{# TOP LEVEL PAGES === #}}
+  <!-- For some reason I can't close these tags here or I get an error.... -->
+  {{ if segment_1 == "blog" }}
+  {{ member:profile member={{ author }} }}
+  <!-- Blog -->
+  <link rel="author" content="{{ gplusprofile }}" />
+  <meta name="twitter:creator" content="{{ twitterprofile }}" />
+  <meta name="twitter:site" content="{{ twitterprofile }}">
+  {{ /member:profile }}
+  {{ else }}
+  <!-- Non-blog -->
+  {{ member:profile member={{ author }} }}
+  <link rel="author" content="{{ gplusprofile }}" />
+  <meta name="twitter:creator" content="{{ twitterprofile }}" />
+  <meta name="twitter:site" content="{{ twitterprofile }}">
+  {{ /member:profile }}
+  {{ endif }}
 
 {{ if segment_1 != "404" && segment_1 != "blog" }}
   <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
@@ -15,14 +31,6 @@
   <!-- Default Meta Keywords -->
   <meta name="keywords" content="{{ keywords }}" />
   {{ endif }}
-
-  <!-- For some reason I can't close these tags here or I get an error.... -->
-  {{ member:profile member={{ author }}
-  <!-- Profile Link -->
-  <link rel="author" content="{{ gplusprofile }}">
-  <meta name="twitter:creator" content="{{ twitterprofile }}" />
-  <meta name="twitter:site" content="{{ twitterprofile }}">
-  {{ /member:profile }}
 
   {{ if url_image|not_empty }}
   <!-- Meta Image Links: Open Graph (Facebook) and Twitter -->
@@ -55,13 +63,6 @@
   <!-- Default Meta Keywords -->
   <meta name="keywords" content="{{ keywords }}" />
   {{ endif }}
-
-  {{ member:profile member="{{ author }}" }}
-  <!-- Profile Info -->
-  <link rel="author" content="{{ gplusprofile }}" />
-  <meta name="twitter:creator" content="{{ twitterprofile }}" />
-  <meta name="twitter:site" content="{{ twitterprofile }}">
-  {{ /member:profile }}
 
   {{ if url_image|not_empty  }}
   <!-- Meta Image Links: Open Graph (Facebook) and Twitter -->

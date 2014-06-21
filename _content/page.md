@@ -1,6 +1,7 @@
 ---
 title: Home
-_fieldset: page
+_fieldset: 
+author: keith
 gplusprofile: https://www.google.com/+KeithPerkins1
 twitterprofile: https://www.twitter.com/keithaperkins
 {{# url_image: uncomment this and insert link to a picture #}} 
