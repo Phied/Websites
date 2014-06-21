@@ -1,8 +1,6 @@
 ---
 title: Running With Headphones
 author: keith
-gplus_profile: https://www.google.com/+KeithPerkins1
-twitter_profile: https://www.twitter.com/keithaperkins
 url_image: "http://media.t3.com/img/resized/pm/xl_PMX-685i-624.jpg"
 categories_url_list:
   - Training

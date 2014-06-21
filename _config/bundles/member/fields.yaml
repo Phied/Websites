@@ -41,6 +41,12 @@ fields:
   show_password:
     type: show_password
     save_value: false
+  gplusprofile:
+    type: text
+    display: Google Plus Profile Link
+  twitterprofile:
+    type: text
+    display: Twitter Profile Link
   roles:
     type: checkboxes
     display: Roles

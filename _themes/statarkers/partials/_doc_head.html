@@ -35,3 +35,8 @@
 {{ theme:partial src="_analytics" }}
 
 </head>
+
+  <!-- Debug -->
+  {{ if is_dev }}
+    {{ _debug|dump }}
+  {{ endif }}

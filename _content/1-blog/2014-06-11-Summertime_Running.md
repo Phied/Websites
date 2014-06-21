@@ -1,8 +1,6 @@
 ---
 title: Summertime and Joyful Running
 author: keith
-gplus_profile: https://www.google.com/+KeithPerkins1
-twitter_profile: https://www.twitter.com/keithaperkins
 {{# url_image: uncomment this and insert link to a picture #}} 
 categories_url_list:
   - running
@@ -12,15 +10,15 @@ keywords: "summertime, heat, season, diet, pace, decrease, mileage"
 meta_desc: "Learn some reasons why your running times might be getting slower during the summer."
 excerpt: |
   <p>
-  	After running my half marathon in Bristol back in April, I feel like I've only been getting slower.  I'm trying to figure out why exactly that is.  After re-thinking the last few months, here's a couple of reasons why I have slowed down:  Season change, Diet, Less Mileage, Time Constraints.
+    After running my half marathon in Bristol back in April, I feel like I've only been getting slower.  I'm trying to figure out why exactly that is.  After re-thinking the last few months, here's a couple of reasons why I have slowed down:  Season change, Diet, Less Mileage, Time Constraints.
 
-	The good news is that I'm pretty certain I'll be ready for the big race in november.
+  The good news is that I'm pretty certain I'll be ready for the big race in november.
   </p>
 ---
 <p>
-	After running my half marathon in Bristol back in April, I feel like I've only been getting slower.  I'm trying to figure out why exactly that is.  After re-thinking the last few months, here's a couple of reasons why I have slowed down:  Season change, Diet, Less Mileage, Time Constraints.
+  After running my half marathon in Bristol back in April, I feel like I've only been getting slower.  I'm trying to figure out why exactly that is.  After re-thinking the last few months, here's a couple of reasons why I have slowed down:  Season change, Diet, Less Mileage, Time Constraints.
 
-	The good news is that I'm pretty certain I'll be ready for the big race in november.
+  The good news is that I'm pretty certain I'll be ready for the big race in november.
 </p>
 <p>
 <h3>Season Change</h3>
@@ -33,48 +31,48 @@ I'm fairly certain that this is my number one cause of the running slowdown.  I 
 <colgroup />
 <colgroup span="3" title="title" />
 <thead>
-	<tr>
-		<th scope="col">Air Temp</th>
-		<th scope="col">Pace/Mile</th>
-		<th scope="col">Impact</th>
-	</tr>
+  <tr>
+    <th scope="col">Air Temp</th>
+    <th scope="col">Pace/Mile</th>
+    <th scope="col">Impact</th>
+  </tr>
 </thead>
 <tfoot>
-	<tr>
-		<td colspan="100%">Based on a runner at 8:00 min/mi pace</td>
-	</tr>
+  <tr>
+    <td colspan="100%">Based on a runner at 8:00 min/mi pace</td>
+  </tr>
 </tfoot>
 <tbody>
-	<tr>
-		<td>50&deg;F</td>
-		<td>8:00 min/mi</td>
-		<td>None</td>
-	</tr>
-	<tr>
-		<td>60&deg;F</td>
-		<td>8:12 min/mi</td>
-		<td>2-3% increase</td>
-	</tr>
-	<tr>
-		<td>70&deg;F</td>
-		<td>8:31 min/mi</td>
-		<td>6-7% increase</td>
-	</tr>
-	<tr>
-		<td>80&deg;F</td>
-		<td>9:06 min/mi</td>
-		<td>12-15% increase</td>
-	</tr>
-	<tr>
-		<td>85&deg;F</td>
-		<td>9:31 min/mi</td>
-		<td>18-20% increase</td>
-	</tr>
-	<tr>
-		<td>Over 85&deg;F</td>
-		<td>???</td>
-		<td>Use Caution</td>
-	</tr>
+  <tr>
+    <td>50&deg;F</td>
+    <td>8:00 min/mi</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>60&deg;F</td>
+    <td>8:12 min/mi</td>
+    <td>2-3% increase</td>
+  </tr>
+  <tr>
+    <td>70&deg;F</td>
+    <td>8:31 min/mi</td>
+    <td>6-7% increase</td>
+  </tr>
+  <tr>
+    <td>80&deg;F</td>
+    <td>9:06 min/mi</td>
+    <td>12-15% increase</td>
+  </tr>
+  <tr>
+    <td>85&deg;F</td>
+    <td>9:31 min/mi</td>
+    <td>18-20% increase</td>
+  </tr>
+  <tr>
+    <td>Over 85&deg;F</td>
+    <td>???</td>
+    <td>Use Caution</td>
+  </tr>
 </tbody>
 </table>
 

@@ -111,6 +111,7 @@ _environments:
     - 'http://localhost*'
     - '*.dev'
     - '*.localip'
+    - '127.0.0.1'
   live:
     - '*.com'
     - '*.net'
@@ -196,8 +197,8 @@ _cookies.cipher_mode: MCRYPT_MODE_CBC
 
 _public_path:
 
-## Test Debug
-_display_debug_panel: false 
+# Test Debug
+_display_debug_panel: false
 
-## Added in 1.79
+# Added in 1.79
 _markdown_parser: parsedown

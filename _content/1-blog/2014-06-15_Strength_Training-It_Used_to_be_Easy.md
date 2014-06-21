@@ -1,8 +1,6 @@
 ---
 title: Strength Training - It Used to be Easy
 author: keith
-gplus_profile: https://www.google.com/+KeithPerkins1
-twitter_profile: https://www.twitter.com/keithaperkins
 {{# url_image: uncomment this and insert link to a picture #}} 
 categories_url_list:
   - Training

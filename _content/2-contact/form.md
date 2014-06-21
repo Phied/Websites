@@ -1,6 +1,5 @@
 ---
 title: Contact Form
-_template: contact
 author: keith
 gplus_profile: https://www.google.com/+KeithPerkins1
 twitter_profile: https://www.twitter.com/keithaperkins
