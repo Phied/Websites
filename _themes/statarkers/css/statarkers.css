@@ -458,7 +458,10 @@ a {
 
 .custom_table td {
   font-weight: normal;
-  font-size: 1em;
+  font-size: .9em;
+  text-align: center;
+  line-height: 1em;
+  font-family: "Calibri";
 }
 
 .custom_table td, .custom_table th {
@@ -495,8 +498,8 @@ a {
   color: white;
   font-variant: small-caps;
   text-align: center;
-  font-size: .9em;
-  font-weight: bold;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 .custom_table tr:hover {
   background-color: #F0FBFF;
