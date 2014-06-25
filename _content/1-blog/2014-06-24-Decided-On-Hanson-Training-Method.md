@@ -40,18 +40,18 @@ excerpt: '<p>The time is nearly here to start my official marathon workouts. I h
 <tbody>
   <tr>
     <td>Off</td>
-    <td>Speed</td>
-    <td>Recovery</td>
+    <td>Off</td>
     <td>Tempo</td>
+    <td>Recovery</td>
     <td>Easy</td>
     <td>Cross-Train</td>
     <td>Long</td>
   </tr>
   <tr>
   	<td>No Running</td>
-  	<td>6x400 <br>@<br>6:30</td>
-  	<td>5-6 mi<br>@<br> 9:00+</td>
-  	<td>5 mi<br>@<br>7:30+?</td>
+  	<td>No Running <br>@<br>6:30</td>
+  	<td>5 mi<br>@<br> 7:30+</td>
+  	<td>5-6 mi<br>@<br>9:00+?</td>
   	<td>6 mi<br>@<br>8:30+</td>
   	<td>Cycle 1 hour</td>
   	<td>10 mi<br>@<br>8:30+</td>

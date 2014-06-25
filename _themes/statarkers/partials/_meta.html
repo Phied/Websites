@@ -1,23 +1,14 @@
 {{# TOP LEVEL PAGES === #}}
-  <!-- For some reason I can't close these tags here or I get an error.... -->
-  {{ if segment_1 == "blog" }}
-  {{ member:profile member={{ author }} }}
-  <!-- Blog -->
-  <link rel="author" content="{{ gplusprofile }}" />
-  <meta name="twitter:creator" content="{{ twitterprofile }}" />
-  <meta name="twitter:site" content="{{ twitterprofile }}">
-  {{ /member:profile }}
-  {{ else }}
+
+{{ if segment_1 != "404" && segment_1 != "blog" }}
+  <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
+
   <!-- Non-blog -->
   {{ member:profile member={{ author }} }}
   <link rel="author" content="{{ gplusprofile }}" />
   <meta name="twitter:creator" content="{{ twitterprofile }}" />
   <meta name="twitter:site" content="{{ twitterprofile }}">
   {{ /member:profile }}
-  {{ endif }}
-
-{{ if segment_1 != "404" && segment_1 != "blog" }}
-  <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
 
   <meta name="google-site-verification" content="2aMh7ePx3iUaDM6XgYUQXVVsJYWzvASmXKfmC0XoYcc" />
   {{ if meta_desc|not_empty }}
@@ -52,6 +43,14 @@
 
 {{ if segment_1 == "blog" && (segment_2 != "categories" || segment_2 != "tags") && segment_3 == "" }}
   <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
+
+  {{ member:profile member={{ author }} }}
+  <!-- Blog -->
+  <link rel="author" content="{{ gplusprofile }}" />
+  <meta name="twitter:creator" content="{{ twitterprofile }}" />
+  <meta name="twitter:site" content="{{ twitterprofile }}">
+  {{ /member:profile }}
+
   {{ if meta_desc|not_empty }}
   <!-- Descriptions - Normal Meta, Open Graph, Twitter -->
   <meta name="description" content="{{ meta_desc|striptags }}" />
