@@ -54,7 +54,7 @@
           }}" alt="" class="article__img">
           {{ endif }}
 
-          {{ summary|smartypants|markdown }}
+          <div class="article__summary">{{ summary|smartypants|markdown }}</div>
 
           <p class="article__more"><a href="{{ url }}">Keep Reading <i class="fa fa-arrow-right"></i></a></p>
           
@@ -77,13 +77,13 @@
   {{ if total_pages > 1 }}
   <div class="pagination">
     {{ if previous_page }}
-      <a href="{{ previous_page }}" class="pagination__prev">&larr; Prev</a>
+      <a href="{{ previous_page }}" class="pagination__prev"><i class="fa fa-arrow-left"></i> Prev</a>
     {{ endif }}
 
     <span class="pagination__number">Page {{ current_page }} of {{ total_pages }}</span>
     
     {{ if next_page }}
-      <a href="{{ next_page }}" class="pagination__next">Next &rarr;</a>
+      <a href="{{ next_page }}" class="pagination__next">Next <i class="fa fa-arrow-right"></i></a>
     {{ endif }}
   </div><!-- END .pagination -->
   {{ endif }}

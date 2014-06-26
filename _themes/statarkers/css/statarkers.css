@@ -744,7 +744,7 @@ p.article__date{
 text-align: right;
 }
 
-div.article__meta {
+div.article__meta, div.article__summary {
   text-align: center;
 }
 

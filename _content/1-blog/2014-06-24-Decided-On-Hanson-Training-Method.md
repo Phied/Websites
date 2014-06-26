@@ -44,20 +44,20 @@ excerpt: '<p>The time is nearly here to start my official marathon workouts. I h
     <td>Tempo</td>
     <td>Recovery</td>
     <td>Easy</td>
-    <td>Cross-Train</td>
+    <td>10K Race</td>
     <td>Long</td>
   </tr>
   <tr>
   	<td>No Running</td>
-  	<td>No Running <br>@<br>6:30</td>
+  	<td>No Running</td>
   	<td>5 mi<br>@<br> 7:30+</td>
   	<td>5-6 mi<br>@<br>9:00+?</td>
   	<td>6 mi<br>@<br>8:30+</td>
-  	<td>Cycle 1 hour</td>
+  	<td>10K Race</td>
   	<td>10 mi<br>@<br>8:30+</td>
   </tr>
 </tbody>
 </table>
-<p>The table above has my current plan as of now.  I'm hoping I'm able to do all of it.  I know a few weeks ago, my speed workout and tempo workouts would have been perfect.  I'll have to see how I do with effort and HR.  I figure I may have to decrease these a little bit to deal with the summer heat.</p>
+<p>The table above has my current plan as of now.  I'm hoping I'm able to do all of it.  I know a few weeks ago, my speed workout and tempo workouts would have been perfect.  I'll have to see how I do with effort and HR.  I figure I may have to decrease these a little bit to deal with the summer heat.  Depending on how I feel Sunday, depends on if I'll modify the distance of the long run.  I just realized I had a race this saturday.  I was off a week on my internal clock.</p>
 <p>I'm actually pretty excited to try out the Hanson Marathon Method.  I have heard of it, and understand its basic principles, but I feel that as I'm doing this training I need to know more.  So, I went ahead and bought their book - <a href="http://www.amazon.com/gp/offer-listing/1934030856/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1934030856&linkCode=am2&tag=perdotnet-20&linkId=3HR5KAPWG3XXZURF">Hansons Marathon Method: A Renegade Path to Your Fastest Marathon</a>. I am certain to be learning many crucial elements while reading this book - including diet tips.</p>
 <p> Well, wish me luck on this week's training!  </p>
