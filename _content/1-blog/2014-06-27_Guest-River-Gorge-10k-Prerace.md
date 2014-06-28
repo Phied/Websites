@@ -8,7 +8,7 @@ categories_url_list:
   - trail running
   - racing
   - 10k
-summary: "<img src="https://farm6.staticflickr.com/5113/14511941554_82e22c7fcc.jpg" width="500" height="442" alt="Mapmyrun-Gorge10k"></a>"
+summary: "<img src="https://farm6.staticflickr.com/5113/14511941554_82e22c7fcc.jpg" width="90%" height="90%" alt="Mapmyrun-Gorge10k"></a>"
 keywords: '10k race, trail race, scenery, guest river gorge, pre-race'
 meta_desc: 'These are my thoughts on the Guest River Gorge 10k coming up on the 28th.'
 excerpt: '<p> My first 10k race of the year is coming up on the 28th.  I have some mixed feelings about this one.  One one hand, I'm very excited since it is a trail race.  I haven't done a trail race in years.  I'm also pretty nervous because of the same reason, plus this has a rough steady incline the last half as you can see in the map above. </p>'

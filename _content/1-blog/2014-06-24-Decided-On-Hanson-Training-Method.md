@@ -17,19 +17,21 @@ excerpt: '<p>The time is nearly here to start my official marathon workouts. I h
 
 <p>The first link I put in is similar to the actual workouts I'll be doing 2 weeks from now.  I'll post each workout week on here before I do them, and then after the week is over, I'll put up my thoughts as well.  </p>
 
-<p>I went with the Hanson plan because it seems to focus on my main weak area - running on tired legs.  I've never really had an issue with speed workouts, but after I get to a certain mileage - I feel very sluggish.  This plan teaches my body how to deal and run on tired legs.  The mileage it has is also a very big plus with my busy lifestyle.  Here's what I plan to do this week - to lead into Hanson. </p><table class="custom_table">
+<p>I went with the Hanson plan because it seems to focus on my main weak area - running on tired legs.  I've never really had an issue with speed workouts, but after I get to a certain mileage - I feel very sluggish.  This plan teaches my body how to deal and run on tired legs.  The mileage it has is also a very big plus with my busy lifestyle.  Here's what I plan to do this week - to lead into Hanson. </p>
+<table class="custom_table">
 <caption>Training Week 6/23-6/30</caption>
-<colgroup>
-</colgroup><colgroup span="7" title="title">
-</colgroup><thead>
+<colgroup span="7" title="title">
+  
+</colgroup>
+<thead>
   <tr>
-  	<th scope="col">Monday</th>
-  	<th scope="col">Tuesday</th>
-  	<th scope="col">Wednesday</th>
-  	<th scope="col">Thursday</th>
-  	<th scope="col">Friday</th>
-    <th scope="col">Saturday</th>
-    <th scope="col">Sunday</th>
+  	<th class="col" span="1">Monday</th>
+  	<th class="col" span="1">Tuesday</th>
+  	<th class="col" span="1">Wednesday</th>
+  	<th class="col" span="1">Thursday</th>
+  	<th class="col" span="1">Friday</th>
+    <th class="col" span="1">Saturday</th>
+    <th class="col" span="1">Sunday</th>
   </tr>
 </thead>
 <tfoot>

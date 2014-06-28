@@ -28,13 +28,12 @@ I'm fairly certain that this is my number one cause of the running slowdown.  I 
 
 <table class="custom_table">
 <caption>Heat Effects on Pace</caption>
-<colgroup />
 <colgroup span="3" title="title" />
 <thead>
   <tr>
-    <th scope="col">Air Temp</th>
-    <th scope="col">Pace/Mile</th>
-    <th scope="col">Impact</th>
+    <th class="col" span="1">Air Temp</th>
+    <th class="col" span="1">Pace/Mile</th>
+    <th class="col" span="1">Impact</th>
   </tr>
 </thead>
 <tfoot>
