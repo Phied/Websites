@@ -2,6 +2,8 @@
   <ul class="nav__list">
     <li class="nav__listItem"><!-- <a href="{{ _site_url }}running/status" class="btn fa-flag-checkered" {{ if !segment_1 }} {{ endif }} id="running-button" value="&#xf11e;"></a> --><a href="{{ homepage }}"{{ if !segment_1 }} class="current"{{ endif }} id="home-button"></a><!-- <a href="{{ _site_url }}contact/form" class="btn fa-envelope" {{ if !segment_1 }} {{ endif }} id="contact-button" value="&#xf003;"></a> --></li>
     {{ nav from="/" max_depth="2" }}
+    <!-- Comment out this stuff below to prevent extra buttons from appearing - May modify this later. -->
+    <!--
     <li class="nav__listItem">
       <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }}</a>
       {{ if children }}
@@ -11,7 +13,8 @@
         {{ /children }}
       </ul>
       {{ endif }}
-    </li>
+    </li> 
+    -->
     {{ /nav }}
   </ul>
 </nav>
