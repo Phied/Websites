@@ -4,12 +4,11 @@ author: keith
 url_image: 'https://farm4.staticflickr.com/3869/14378801090_17a190920a.jpg'
 categories_url_list:
   - running
-  - training
-  - marathon
-  - weekly workouts
-summary: '<img src="https://farm4.staticflickr.com/3869/14378801090_17a190920a.jpg" alt="Guest River Gorge 14">'
+  - race
+  - 10k
+summary: '<img src="https://farm4.staticflickr.com/3869/14378801090_17a190920a.jpg" width="90%" height="90%" alt="Guest River Gorge 14">'
 keywords: 'Race, 10k, 10k race, Mile, tired legs, hill, hills, mountain'
-meta_desc: 'Decided to try the Hanson Marathon Plan.  I also have decided on a workout leading up to the plan.'
+meta_desc: 'The results and thoughts of the Guest River Gorge 10k - 2014 in Coeburn, VA.'
 excerpt: '<p>Over the past weekend, I had my first 10K race this year.  Some of the race experience was expected, some of it wasn't.  Overall I did well, but I hope to be able to run a little faster soon.  Here is what I liked and disliked about the race. </p>'
 ---
 <p>Over the past weekend, I had my first 10K race this year.  Some of the race experience was expected, some of it wasn't.  Overall I did well, but I hope to be able to run a little faster soon.  Here is what I liked and disliked about the race.</p>
