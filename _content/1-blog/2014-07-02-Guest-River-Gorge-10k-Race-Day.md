@@ -6,13 +6,12 @@ categories_url_list:
   - running
   - race
   - 10k
-summary: '<img src="https://farm4.staticflickr.com/3869/14378801090_17a190920a.jpg" width="90%" height="90%" alt="Guest River Gorge 14">'
+main_img: https://farm4.staticflickr.com/3869/14378801090_17a190920a.jpg
+alt_img_txt: "Guest River Gorge 14"
 keywords: 'Race, 10k, 10k race, Mile, tired legs, hill, hills, mountain'
 meta_desc: 'The results and thoughts of the Guest River Gorge 10k - 2014 in Coeburn, VA.'
-excerpt: '<p>Over the past weekend, I had my first 10K race this year.  Some of the race experience was expected, some of it wasn't.  Overall I did well, but I hope to be able to run a little faster soon.  Here is what I liked and disliked about the race. </p>'
+summary: Over the past weekend, I had my first 10K race this year.  Some of the race experience was expected, some of it wasn't.  Overall I did well, but I hope to be able to run a little faster soon.  Here is what I liked and disliked about the race.
 ---
-<p>Over the past weekend, I had my first 10K race this year.  Some of the race experience was expected, some of it wasn't.  Overall I did well, but I hope to be able to run a little faster soon.  Here is what I liked and disliked about the race.</p>
-
 <p><h3>Getting There</h3></p>
 
 <p>I have to admit, finding the location of this race was no picnic.  I tried a couple days before to use Google Maps to find the location of the park.  For some reason, Google kept taking me out to the middle of nowhere.  I had to keep comparing different maps and using a variety of sites to compare and get directions.  Eventually, I found instructions that I felt would lead me to the park.  In summary, the directions would be - Get to Coeburn, head south on Dungannon road for a few miles, then make a left into the park. </p>

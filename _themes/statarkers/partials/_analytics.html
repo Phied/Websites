@@ -1,15 +1,19 @@
-{{ if enable_analytics == "yes" }}
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+{{ if !disable_analytics }}
+<script type="text/javascript">
 
-  ga('create', 'UA-52006937-1', 'perkinsblog.net');
-  ga('require', 'displayfeatures');
-  ga('send', 'pageview');
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+  _gaq.push(['_trackPageview']);
 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
 </script>
+{{ else }}
+<!-- DEV MODE -->
 {{ endif }}
 
 {{#
@@ -18,14 +22,13 @@
 ====================================
 
 Enter your Google analytics code here, you can just enter your account id here UA-XXXXX-X.
-The analytics is wrapped in a conditional which will stop google tracker your site when
-on a development server. You will need to uncomment the enable_analytics variables in the 
-dev and live yaml files. These are located in the environments folder which is located in the _config folder.
 
-The old line
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+The analytics code is wrapped in a conditional which will stop google from tracking your site when
+on a development server. You will need to add "disable_analytics: true" (without the quotes) in your 
+dev yaml file. This is located in the environments folder which is located in the _config folder.
 
 Once this is in place you can set up your eviroments in the settings.yaml file located in the _config folder.
+
 For more information see: http://statamic.com/learn/advanced-features/environments.
 
 #}}

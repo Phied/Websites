@@ -2,80 +2,18 @@
 
 {{ if segment_1 != "404" && segment_1 != "blog" }}
   <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
-
-  <!-- Non-blog -->
-  {{ member:profile member={{ author }} }}
-  <link rel="author" content="{{ gplusprofile }}" />
-  <meta name="twitter:creator" content="{{ twitterprofile }}" />
-  <meta name="twitter:site" content="{{ twitterprofile }}">
-  {{ /member:profile }}
-
-  <meta name="google-site-verification" content="2aMh7ePx3iUaDM6XgYUQXVVsJYWzvASmXKfmC0XoYcc" />
   {{ if meta_desc|not_empty }}
-  <!-- Descriptions - Normal Meta, Open Graph, Twitter -->
-  <meta name="description" content="{{ meta_desc|striptags }}" />
-  <meta property="og:description" content="{{ meta_desc }}" /> 
-  <meta name="twitter:description" content="{{ meta_desc }}" />
+  <meta name="description" content="{{ meta_desc|striptags }}">
   {{ endif }}
-
-  {{ if keywords|not_empty }}
-  <!-- Default Meta Keywords -->
-  <meta name="keywords" content="{{ keywords }}" />
-  {{ endif }}
-
-  {{ if url_image|not_empty }}
-  <!-- Meta Image Links: Open Graph (Facebook) and Twitter -->
-  <meta property="og:image" content="{{ url_image }}" />
-  <meta name="twitter:image" content="{{ url_image }}">
-  {{ endif }}
-
-  <!-- Meta always here: og=Open Graph (Facebook), twitter=twitter -->
-  <meta property="og:type" content="{{ segment_1 }}" />
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:site_name" content="{{ _site_name }}" />
-  <meta property="og:url" content="{{ permalink }}">
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ title }}">
-
 {{ endif }}
 
 {{# BLOG =============== #}}
 
 {{ if segment_1 == "blog" && (segment_2 != "categories" || segment_2 != "tags") && segment_3 == "" }}
   <title>{{ if meta_title|not_empty }}{{ meta_title }}{{ else }}{{ title }}{{ endif }}{{ if get:page > 0 }} Page {{ get:page }}{{ endif }} | {{ _site_name }}</title>
-
-  {{ member:profile member={{ author }} }}
-  <!-- Blog -->
-  <link rel="author" content="{{ gplusprofile }}" />
-  <meta name="twitter:creator" content="{{ twitterprofile }}" />
-  <meta name="twitter:site" content="{{ twitterprofile }}">
-  {{ /member:profile }}
-
   {{ if meta_desc|not_empty }}
-  <!-- Descriptions - Normal Meta, Open Graph, Twitter -->
-  <meta name="description" content="{{ meta_desc|striptags }}" />
-  <meta property="og:description" content="{{ meta_desc }}" /> 
-  <meta name="twitter:description" content="{{ meta_desc }}" />
+  <meta name="description" content="{{ meta_desc|striptags }}">
   {{ endif }}
-
-  {{ if keywords|not_empty }}
-  <!-- Default Meta Keywords -->
-  <meta name="keywords" content="{{ keywords }}" />
-  {{ endif }}
-
-  {{ if url_image|not_empty  }}
-  <!-- Meta Image Links: Open Graph (Facebook) and Twitter -->
-  <meta property="og:image" content="{{ url_image }}" />
-  <meta name="twitter:image" content="{{ url_image }}">
-  {{ endif }}
-
-  <!-- Meta always here: og=Open Graph (Facebook), twitter=twitter -->
-  <meta property="og:type" content="{{ segment_1 }}" />
-  <meta property="og:title" content="{{ title }}" />
-  <meta property="og:site_name" content="{{ _site_name }}" />
-  <meta property="og:url" content="{{ permalink }}">
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ title }}">
 {{ endif }}
 
 {{ if segment_1 == "blog" && segment_2 == "categories" }}

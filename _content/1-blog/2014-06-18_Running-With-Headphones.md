@@ -7,15 +7,11 @@ categories_url_list:
   - Music
   - Running
 keywords: "Running, Music, Safety, Headphones, Marathon, Motivation"
-summary:
+main_img: http://media.t3.com/img/resized/pm/xl_PMX-685i-624.jpg
+alt_img_txt: "Best Running Headphones"
 meta_desc: "The ups and downs about running music.  Plus a really easy way to try 10 new running songs!"
-excerpt: |
-  <p> The days are getting longer, hotter, and it's harder to find the gumption to get up and running.  Sometimes I'll stumble across a new form of motivation.  Unfortunately, this time of the year that's a very hard thing to find.  With a marathon coming up, it's easier to get going, but I am not a huge fan of running for over an hour at a time.  So, I find myself thinking, "How can I enjoy running very long miles, and doing it in the heat?"  Well, should I try running with music again? </p>
+summary: The days are getting longer, hotter, and it's harder to find the gumption to get up and running.  Sometimes I'll stumble across a new form of motivation.  Unfortunately, this time of the year that's a very hard thing to find.  With a marathon coming up, it's easier to get going, but I am not a huge fan of running for over an hour at a time.  So, I find myself thinking, "How can I enjoy running very long miles, and doing it in the heat?"  Well, should I try running with music again?
 ---
-<img src="http://media.t3.com/img/resized/pm/xl_PMX-685i-624.jpg" width="100%" alt="Best Running Headphones" />
-
-<p> The days are getting longer, hotter, and it's harder to find the gumption to get up and running.  Sometimes I'll stumble across a new form of motivation.  Unfortunately, this time of the year that's a very hard thing to find.  With a marathon coming up, it's easier to get going, but I am not a huge fan of running for over an hour at a time.  So, I find myself thinking, "How can I enjoy running very long miles, and doing it in the heat?"  Well, should I try running with music again? </p>
-
 <p><h3>No Tunes?</h3></p>
 
 <p>As long as I have been running, probably 80% of the time I have no music on during a workout.  Normally, I enjoy hearing the sound of me breathing, my feet on the ground, and any sound that nature presents me with.  Also, around here, there are many cars on the road, dogs barking at me, and the occasional "neighborly hello."  <br /><br />

@@ -1,11 +1,13 @@
-{{# <section role="main">
+<main role="main">
+  {{ if not segment_1 }} <!-- Added in this line to the left -->
   {{ if alt_title }}
   <h2>{{ alt_title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
   {{ else }}
   <h2>{{ title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h2>
   {{ endif }}
+  {{ endif }}
   {{ content }}
-</section><!-- END role="main" --> #}}
+</main><!-- END role="main" -->
 
 <section role="main">
 <section role="greeting"> {{ site_greeting }} </section>
@@ -15,7 +17,7 @@
 {{ theme:partial src="_article_listing" fold="{blog_name}" lim="5" tax="no" }}
 </section>
 
-{{# 
+{{#
 ====================================
   NOTES
 ====================================
@@ -31,5 +33,5 @@ See http://statamic.com/learn/core-concepts/how-pages-are-built for more informa
 This template is using the articles template partial with a variable which sets
 the limit (number of posts to display). Change the lim="5" variable to however many
 posts you would like to display.
-  
+
 #}}

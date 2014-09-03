@@ -5,15 +5,12 @@ author: keith
 categories_url_list:
   - Training
   - Strength Training
-summary:
+main_img:
 keywords: "Strength Training, Running, high school, college, six pack abs"
 meta_desc: "The importance of strength training, and how much I struggle with it."
-excerpt: |
-  <p> One of my biggest weaknesses when it comes to running is the lack of strength training.  To be honest, even in high school and college I never really cared for it very much.  When I had a coach, it was always something I made sure to do.  I grumbled a bit about it, but I always did what my coach set before me.  Was it fear of him finding out I was slacking?  It's very hard to say, but eventually it became part of the pre-workout ritual.  To be honest, I did notice a difference with my running when I was doing my required exercises.  </p>
+summary: One of my biggest weaknesses when it comes to running is the lack of strength training.  To be honest, even in high school and college I never really cared for it very much.  When I had a coach, it was always something I made sure to do.  I grumbled a bit about it, but I always did what my coach set before me.  Was it fear of him finding out I was slacking?  It's very hard to say, but eventually it became part of the pre-workout ritual.  To be honest, I did notice a difference with my running when I was doing my required exercises.
 
 ---
-<p> One of my biggest weaknesses when it comes to running is the lack of strength training.  To be honest, even in high school and college I never really cared for it very much.  When I had a coach, it was always something I made sure to do.  I grumbled a bit about it, but I always did what my coach set before me.  Was it fear of him finding out I was slacking?  It's very hard to say, but eventually it became part of the pre-workout ritual.  To be honest, I did notice a difference with my running when I was doing my required exercises.  </p>
-
 <p><h3>High School</h3></p>
 
 <p>In high school.... Well, let's be realistic.  There wasn't much strength training other than situps, and some stretching.  At the time I didn't know a whole lot about running, but this stuff was still a pain to do.  I was ready to run, and this stuff always got in the way.  The situps weren't necessarily difficult, just tedious.  Before every run I was required to do 100 situps, followed up by stretching - static only.  I was told that the situps help with my breathing during my run, while my stretching increased my flexibility.  To me it made sense.  I didn't know if it was a placebo effect on me, or if there really was something, but it did seem easier to run. I still hated the pre-run ritual. </p>

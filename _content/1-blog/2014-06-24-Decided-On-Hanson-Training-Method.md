@@ -6,13 +6,11 @@ categories_url_list:
   - training
   - marathon
   - weekly workouts
-summary: ""
+main_img: ""
 keywords: 'Hanson Marathon, Marathon, tired legs, marathon workouts, marathon plan'
 meta_desc: 'Decided to try the Hanson Marathon Plan.  I also have decided on a workout leading up to the plan.'
-excerpt: '<p>The time is nearly here to start my official marathon workouts. I have one, maybe two weeks left to prepare my body for the workouts involved. After considering the amount of time I have, the way my body works with mileage vs speed, I’ve decided to try the <a href="http://www.hansons-running.com/training-plans/advanced-training-plan/">Hanson Marathon Plan.</a></p>'
+summary: '<p>The time is nearly here to start my official marathon workouts. I have one, maybe two weeks left to prepare my body for the workouts involved. After considering the amount of time I have, the way my body works with mileage vs speed, I’ve decided to try the <a href="http://www.hansons-running.com/training-plans/advanced-training-plan/">Hanson Marathon Plan.</a></p>'
 ---
-<p>The time is nearly here to start my official marathon workouts.  I have one, maybe two weeks left to prepare my body for the workouts involved.  After considering the amount of time I have, the way my body works with mileage vs speed, I've decided to try the <a href="http://www.hansons-running.com/training-plans/advanced-training-plan/">Hanson Marathon Plan.</a></p>
-
 <p>If you're unsure of what the Hanson Marathon Method is, check out this <a href="http://www.runnersworld.com/race-training/marathoning-hansons-way">Runner's World</a> link for more information on it.</p>
 
 <p>The first link I put in is similar to the actual workouts I'll be doing 2 weeks from now.  I'll post each workout week on here before I do them, and then after the week is over, I'll put up my thoughts as well.  </p>

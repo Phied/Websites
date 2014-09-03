@@ -1,0 +1,43 @@
+{{ theme:partial src="_doc_head" }}
+<body class="{{ if segment_1 == "" }}home{{ else }}{{ segment_1 }}{{ endif }}">
+  
+  {{ theme:partial src="_header" }}
+
+  <div class="container">
+    {{ layout_content }}
+  </div><!-- END .container -->
+  {{ theme:partial src="_footer" }}
+
+<!--[if gte IE 8]><!-->
+<script src="{{ theme:js }}"></script>
+<!--<![endif]-->
+
+<!--Added this to get disqus comment count-->
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = '{{disqus_account}}'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+</body>
+</html>
+
+{{#
+====================================
+  NOTES
+====================================
+
+This is the default layouts template used by all pages. If no other layout file is called then Statamic will use this file.
+
+For more information on how Statamic works and the three distinct pieces: content file, template and layout see http://statamic.com/learn/core-concepts/how-pages-are-built.
+
+The RSS link is used in the header. If you are creating an RSS feed make sure to change the title attribute. If you are not creating an RSS feed then you can delete this. For more information on the RSS Feed set up see the feed.html template.
+
+#}}

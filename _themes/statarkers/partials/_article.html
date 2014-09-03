@@ -6,62 +6,65 @@
     {{ else }}
     <h2 class="article__heading">{{ title }}</h2>
     {{ endif }}
-
-    <hr>
     
     {{ if author || date || categories_list || tags_list }}
     <div class="article__meta">
-      {{ if author|not_empty && date}}
-      {{ member:profile member="{{author}}" }}
-      <p class="article__author"> {{ first_name }} {{ last_name }} &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time> <!-- &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-comments"></i>&nbsp;&nbsp;<a href="{{ permalink }}#disqus_thread"></a>&nbsp;&nbsp;•&nbsp;&nbsp;<a href="http://twitter.com/share?url={{ permalink }}&text={{ title }}&via=keithaperkins" target="_blank"><i class="fa fa-twitter-square"></i></a> --></p>
+
+      {{ if author|not_empty }}
+      {{ member:profile member="{author}" }}
+      <!-- <p class="article__author">{{ first_name }} {{ last_name }}</p> -->
+      <p class="article__author"> {{ first_name }} {{ last_name }} &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>
       {{ /member:profile }}
       {{ endif }}
-
-      {{ if date && !author|not_empty}}
-      <p class="article__date"><i class="fa fa-calendar"></i>&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
-      {{ endif }}
-      
+    
       {{ if categories_list && tags_list }}
-      <p class="article__tax"> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
+      <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
       {{ endif }}
 
       {{ if categories_list && !tags_list }}
-      <p class="article__tax"> {{ categories_url_list }}</p>
+      <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
       {{ endif }}
 
       {{ if !categories_list && tags_list }}
       <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
       {{ endif }}
-    {{ endif }}
+  {{ endif }}
     </div><!-- END .article__meta -->
     {{ endif }}
   </header>
 
   {{ if main_img|not_empty }}
+  <div class="summary_img">
+  <img src={{ main_img }}
+            width="90%"
+            height="90%"
+            alt={{ alt_img_txt }} class="article__img">
+  <!--        
   <img src="{{ transform
-    src="{{ main_img }}"
+    src="{main_img}"
     width="650"
     height="450"
     action="smart"
-  }}" alt="" class="article__img">
+    quality="100"
+  }}" alt="" class="article__img"> -->
+  </div>
   {{ endif }}
 
-  <div class="article__summary">
+  <div class="article__lead">
   {{ summary|smartypants|markdown }}
   </div><!-- END .lead -->
 
   <div class="article__main">
   {{ content }}
   </div><!-- END .main-content -->
- 
- {{# 
+  
   <footer class="article__footer">
-    <a href="/">&larr; back</a>
+    <a href="/">back</a>
   </footer>
-</article> #}}
+</article>
 
-<!-- Imbed social icons here.  First is twitter.  Unfortunately, I had to use the javascript... -->
-{{ if segment_1 == "blog"}}
+{{ if segment_1 == "blog" }}
+
 <ul class="social">
 <!-- Twitter -->
 <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ permalink }}" data-count-url="{{ permalink }}" data-via="keithaperkins" data-lang="en">Tweet</a></li>
@@ -100,6 +103,7 @@
 
 {{ if show_comments }}
 <div class="comments">
+  <h3>Leave Your Comments</h3>
   {{ disqus:comments account="{disqus_account}" }}
 </div>
 {{ endif }}

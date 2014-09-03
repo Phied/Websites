@@ -7,13 +7,12 @@ categories_url_list:
   - easy runs
   - 6 milers
   - family running
-summary: '<img src="http://photos-b.ak.instagram.com/hphotos-ak-xap1/10520376_1442817385995985_334835990_n.jpg" width="90%" height="90%" alt="Sunset during easy run in PA.">'
+main_img: http://photos-b.ak.instagram.com/hphotos-ak-xap1/10520376_1442817385995985_334835990_n.jpg
+alt_img_txt: "Sunset in Pennsylvania"
 keywords: 'Easy Run, 6 miler, jog, evening run, easy effort, family, hills, dreaded run, long trip'
 meta_desc: 'The experience of running while in Pennsylvania.'
-excerpt: '<p>Part of what makes running difficult is being able to find the time to run.  Some days you're just exhausted after a full day's work, or you've been at home with your kids all day and you just want to relax.  Sometimes, you have to travel great distances in a car and after you reach your destination, you're given out.  You don't feel like running at all.  That was me a couple of weeks ago.  </p>'
+summary: Part of what makes running difficult is being able to find the time to run.  Some days you're just exhausted after a full day's work, or you've been at home with your kids all day and you just want to relax.  Sometimes, you have to travel great distances in a car and after you reach your destination, you're given out.  You don't feel like running at all.  That was me a couple of weeks ago.
 ---
-<p>Part of what makes running difficult is being able to find the time to run.  Some days you're just exhausted after a full day's work, or you've been at home with your kids all day and you just want to relax.  Sometimes, you have to travel great distances in a car and after you reach your destination, you're given out.  You don't feel like running at all.  That was me a couple of weeks ago.  </p>
-
 <p>Back in November, Dad's siblings came in to visit to show Dad their respects after his sudden passing.  He was the youngest of five children.  As we were all eating dinner his family had talked about the very few times that the entire family had gotten together.  Everyone realized sadly that it was only during funerals.  </p>
 
 <p>We decided that if we didn't start seeing each other more often, we would never get to catch up with one another except in times of sadness.  So, Dad's siblings decided to start a yearly family reunion where everyone could get together.  We starting discussing dates, and locations that would be best to have the reunion.  Eventually, everyone settled on a small town in Pennsylvania during the 4th of July weekend.  It sounded good at the time, but as it approached, I began to dread the 9 hour trip with 3 small kids - one being a baby. </p>

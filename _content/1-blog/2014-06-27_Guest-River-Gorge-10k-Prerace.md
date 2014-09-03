@@ -8,13 +8,12 @@ categories_url_list:
   - trail running
   - racing
   - 10k
-summary: "<img src="https://farm6.staticflickr.com/5113/14511941554_82e22c7fcc.jpg" width="90%" height="90%" alt="Mapmyrun-Gorge10k"></a>"
+main_img: https://farm6.staticflickr.com/5113/14511941554_82e22c7fcc.jpg
+alt_img_txt: "Mapmyrun-Gorge10k"
 keywords: '10k race, trail race, scenery, guest river gorge, pre-race'
 meta_desc: 'These are my thoughts on the Guest River Gorge 10k coming up on the 28th.'
-excerpt: '<p> My first 10k race of the year is coming up on the 28th.  I have some mixed feelings about this one.  One one hand, I'm very excited since it is a trail race.  I haven't done a trail race in years.  I'm also pretty nervous because of the same reason, plus this has a rough steady incline the last half as you can see in the map above. </p>'
+summary: My first 10k race of the year is coming up on the 28th.  I have some mixed feelings about this one.  One one hand, I'm very excited since it is a trail race.  I haven't done a trail race in years.  I'm also pretty nervous because of the same reason, plus this has a rough steady incline the last half as you can see in the map above.
 ---
-<p> My first 10k race of the year is coming up on the 28th.  I have some mixed feelings about this one.  One one hand, I'm very excited since it is a trail race.  I haven't done a trail race in years.  I'm also pretty nervous because of the same reason, plus this has a rough steady incline the last half as you can see in the map above. </p>
-
 <p><h3>Race Strategy</h3></p>
 
 <p>To be quite honest, there's not going to be much strategy here.  I haven't run a hard run of this distance in quite a while.  Probably the 8k I did out in Hampton was the last run of close to this distance done at a hard effort.  I figure that with the overall downhill slope in the first half of this race, I can probably do a sub 7 for each of those splits, and try to hold on for the last half at a 7 minute pace or slightly faster.  Again, this may change the day of the race.  I tend to have a habit or going out fast with adrenaline making the last mile or two excruciating.  Regardless of how fast or slow I go out, I will at least have some beautiful scenery. </p>
