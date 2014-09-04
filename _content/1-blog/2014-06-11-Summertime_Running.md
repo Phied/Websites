@@ -8,10 +8,8 @@ categories_url_list:
 main_img:
 keywords: "summertime, heat, season, diet, pace, decrease, mileage"
 meta_desc: "Learn some reasons why your running times might be getting slower during the summer."
-summary:
-    After running my half marathon in Bristol back in April, I feel like I've only been getting slower.  I'm trying to figure out why exactly that is.  After re-thinking the last few months, here's a couple of reasons why I have slowed down:  Season change, Diet, Less Mileage, Time Constraints.
-
-    The good news is that I'm pretty certain I'll be ready for the big race in november.
+summary: |
+ After running my half marathon in Bristol back in April, I feel like I've only been getting slower.  I'm trying to figure out why exactly that is.  After re-thinking the last few months, here's a couple of reasons why I have slowed down:  Season change, Diet, Less Mileage, Time Constraints.  The good news is that I'm pretty certain I'll be ready for the big race in november.
 ---
 <p>
 <h3>Season Change</h3>
