@@ -5,7 +5,7 @@ author: keith
 categories_url_list:
   - running
   - training
-main_img:
+main_img: http://images.sodahead.com/polls/001895933/4914131758_hot_sweating_sun1_xlarge.jpeg
 keywords: "summertime, heat, season, diet, pace, decrease, mileage"
 meta_desc: "Learn some reasons why your running times might be getting slower during the summer."
 summary: |

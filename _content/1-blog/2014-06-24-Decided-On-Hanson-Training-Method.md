@@ -6,7 +6,7 @@ categories_url_list:
   - training
   - marathon
   - weekly workouts
-main_img: ""
+main_img: http://ecx.images-amazon.com/images/I/41jH4xPBUxL._SY344_BO1,204,203,200_.jpg
 keywords: 'Hanson Marathon, Marathon, tired legs, marathon workouts, marathon plan'
 meta_desc: 'Decided to try the Hanson Marathon Plan.  I also have decided on a workout leading up to the plan.'
 summary: '<p>The time is nearly here to start my official marathon workouts. I have one, maybe two weeks left to prepare my body for the workouts involved. After considering the amount of time I have, the way my body works with mileage vs speed, I’ve decided to try the <a href="http://www.hansons-running.com/training-plans/advanced-training-plan/">Hanson Marathon Plan.</a></p>'

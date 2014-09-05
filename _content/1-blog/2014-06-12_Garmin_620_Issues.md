@@ -5,7 +5,7 @@ author: keith
 categories_url_list:
   - technology
   - garmin
-main_img:
+main_img: http://images.esellerpro.com/2270/I/104/232/lrgscale620-WHT.jpg
 keywords: "Garmin, bugs, Wifi, Charge, GPS, Issues, 620, Master Reset"
 meta_desc: "Some common issues that have been associated with the 620, and how to fix them."
 summary: |
