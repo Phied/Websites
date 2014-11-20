@@ -9,7 +9,6 @@ body:before{background-color:#FFFFFF;border-bottom:1px solid #FBEED5;border-left
 .no-list{margin-top:0;margin-bottom:0;padding-left:0;list-style:none}
 html{font-size:100%;background-color:#FFFFFF;-webkit-font-smoothing:antialiased}
 body{line-height:1.5em; color:#6b6b6b;font-size:14px;font-style:normal;font-family:'Open Sans',sans-serif;background-color:#EEEEEE;font-weight:400}
-body{line-height:1.5;color:#6b6b6b;letter-spacing:0.01rem;font-size:17px;font-style:normal;font-family:'Montaga',sans-serif;background-color:#EEEEEE;font-weight:400}
 h1{font-size:2.25em;margin-bottom:0}
 h2{font-size:1.5em;margin-bottom:0.5em}
 h3{font-size:1.125em;margin-bottom:0.5em}
@@ -17,7 +16,6 @@ h4{font-size:1em;margin-bottom:0}
 h5{font-size:1em;margin-bottom:0}
 h6{font-size:1em;margin-bottom:0}
 h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,0.8;);font-family:'Cinzel',cursive; font-weight:600;}
-h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,0.8;);letter-spacing: -0.02em;font-style:normal;font-family:'Josefin Sans',sans-serif;font-weight:700;}
 h4,h5,h6{margin-bottom:0}
 h1+p,h2+p,h3+p,h4+p,h5+p,h6+p{margin-top:0;}
 a{color:#E67E22;text-decoration:none;-webkit-transition:0.3s;-moz-transition:0.3s;transition:0.3s}
@@ -95,8 +93,6 @@ table tfoot td{text-align:center}
 header[role="banner"] {background: #DDDDDD url(http://farm3.staticflickr.com/2661/13037281323_f2a92fe43e_o.png) left center no-repeat;height: 200px;width: 100%;padding: 2em 0; }
 .brand a{color: #E67E22;font-weight: 700;letter-spacing: .0725em;font-variant: small-caps;text-shadow: 1px 1px 3px #000000;}
 .strap-line {color: #ffffff;font-size: 1em; font-weight: 900;text-shadow: 1px 1px 3px #000000;}
-.brand a{color: #E67E22;font-weight: 700;letter-spacing: 3px;font-variant: small-caps;text-shadow: 1px 1px 3px #000000;}
-.strap-line {color: #ffffff;font-size: 1.2em;font-weight: 700;text-shadow: 1px 1px 3px #000000;letter-spacing: 1px;margin-top: -10px;}
 
 /* Nav Bar */
 nav[role="navigation"] a{display: block;background-color: #555555;color: #f7f7f7;margin-left: auto;margin-right: auto;width: 75px;height: 75px;position: relative;text-align: center;line-height: 75px;font-size: 1.75em;border-radius: 50%;border-style: solid;border-color: #F7F7F7;border-width: .05em;box-shadow: 0px 3px 8px #aaa;}
@@ -105,7 +101,6 @@ nav[role="navigation"] a:hover{text-decoration: none;color: #555;background: #f7
 
 /* Main Text */
 section[role="main"], main[role="main"]{color:rgba(0,0,0,0.8);width: 100%;text-rendering: optimizeLegibility;font-size: 14px;letter-spacing: 0.01rem;line-height: 1.5em;text-align: justify;margin-left: auto;margin-right: auto;margin-top: 2.5em;}
-section[role="main"], main[role="main"]{color:rgba(0,0,0,0.8);width: 100%;text-rendering: optimizeLegibility;font-size: 17px;letter-spacing: 0.01rem;line-height: 1.5;text-align: justify;margin-left: auto;margin-right: auto;margin-top: 2.5em;}
 section[role="greeting"]{text-align: center;margin-top: -2em;}
 h2.article__heading {border-bottom: .05em solid #cccccc;text-align: center;}
 section.articles {vertical-align: middle;width: 100%;margin-left: auto;margin-right: auto;}
@@ -115,9 +110,6 @@ div.summary_img_list {text-align: center;float: left;width: 40%;padding-right: 1
 div.summary_text {color:rgba(0,0,0,0.8);font-size:14px;line-height:1.5;float: right;width: 60%;margin-top: -1.25em;}
 li.articleList__item {background: #FFFFFF;border: .1em solid #CCCCCC;margin-top: 0.9em;margin-bottom: 0.9em;list-style: none;}
 p.article__date, p.article__author, p.article__tax, p.article__more{font-family: 'Cinzel';color: rgba(0,0,0,0.8);font-size: .9em;font-weight: 500;white-space: nowrap;text-align: center;}
-div.summary_text {color:rgba(0,0,0,0.8);font-size:17px;line-height:1.5;float: right;width: 60%;margin-top: -1.25em;}
-li.articleList__item {background: #FFFFFF;border: .1em solid #CCCCCC;margin-top: 0.9em;margin-bottom: 0.9em;list-style: none;}
-p.article__date, p.article__author, p.article__tax, p.article__more{font-family: 'Josefin Sans';color: rgba(0,0,0,0.8);font-size: .8em;font-weight: bold;font-variant: small-caps;white-space: nowrap;text-align: center;}
 .article__main h3 {font-size: 1.125em;border-bottom: .1em solid #CCCCCC;}
 .article_entry h3 {margin-bottom: -1.9em;margin-left: .5em;border-bottom: solid .1em #CCCCCC;}
 .article_entry:after {content: "";display: table;clear: both;}
@@ -168,7 +160,7 @@ input, textarea {
   outline: none;
   width: 100%;
   margin: 0 0 0 0;
-  font-size: 18px;
+  font-size: 14px;
   border: 1px solid #EEEEEE;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
