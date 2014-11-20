@@ -4,10 +4,8 @@ fields:
     required: false
     default:
     type: tags
-
   content:
     type: redactor
-
   excerpt:
     display: Blog Entry Excerpt
     required: true
@@ -15,6 +13,15 @@ fields:
     type: redactor
   author:
     display: Author
+    required: true
+    default: keith
     type: users
-
-hide: true
+  meta_desc:
+    display: Meta description for search engines
+    type: redactor
+  keywords:
+    display: Keywords for this article
+    type: redactor
+  url_image:
+    display: Link to image to show for this article
+    type: redactor

@@ -34,7 +34,7 @@
             <th><div class="header-inner"><?php echo Localization::fetch('title')?></div></th>
             <?php if ($type == 'date'): ?>
               <th><div class="header-inner"><?php echo Localization::fetch('date')?></div></th>
-            <?php elseif ($type == 'number'): ?>
+            <?php elseif ($type == 'number' || $type == 'numeric'): ?>
               <th><div class="header-inner"><?php echo Localization::fetch('number')?></div></th>
             <?php endif; ?>
             <th style="width:80px"><div class="header-inner"><?php echo Localization::fetch('status')?></div></th>
@@ -47,7 +47,11 @@
         <?php $status = isset($entry['status']) ? $entry['status'] : 'live'; ?>
           <tr>
             <td class="checkbox-col">
+            <?php if (array_get($entry, '_admin:protected', false)): ?>
+              <span class="ss-icon protected">lock</span>
+            <?php else: ?>
               <input type="checkbox" name="entries[]" value="<?php echo "{$path}/{$slug}" ?>" data-bind="checked: selectedEntries" >
+            <?php endif ?>
             </td>
 
             <td class="title">
@@ -84,7 +88,7 @@
         </div>
       </div>
 
-       <input type="submit" class="btn pull-left" data-bind="visible: selectedAction() != '' && selectedEntries().length > 0" value="<?php echo Localization::fetch('confirm_delete')?>">
+       <input type="submit" class="btn pull-left" data-bind="visible: selectedAction() != '' && selectedEntries().length > 0" value="<?php echo Localization::fetch('confirm_action')?>">
     </div>
   </form>
 

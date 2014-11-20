@@ -11,52 +11,51 @@
     <ol class="articleList">
     {{ endif }}
       <li class="articleList__item">
-        <article class="article">
-          <h3><a href="{{ url }}"><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;{{ title }}</a></h3>
+        <article class="article_entry">
+          <h3><a href="{{ url }}">{{ title }}</a></h3>
           
           {{ if author || date || categories_list || tags_list }}
           <div class="article__meta">
 
-           {{# To be sure that my author isn't listed here on the listings.
             {{ if author|not_empty }}
             {{ member:profile member="{author}" }}
-            <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p>
+            <!-- <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p> -->
             {{ /member:profile }}
-            {{ endif }}   #}}
+            {{ endif }}
 
             {{ if date }}
-            <p class="article__date"><i class="fa fa-calendar"></i>&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
+            <p class="article__date"><i class="fa fa-calendar"></i><time datetime="{{ datestamp format="Y-m-d" }}"> {{ date }}</time></p>
             {{ endif }}
             
-            <div class="article__text"> {{ excerpt|widont }} </div> {{# Used to be content|widont #}}
-
             {{ if categories_list && tags_list }}
-            <p class="article__tax"> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
+            <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
             {{ endif }}
 
             {{ if categories_list && !tags_list }}
-            <p class="article__tax"> {{ categories_url_list }}</p>
+            <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
             {{ endif }}
 
             {{ if !categories_list && tags_list }}
-            <p class="article__tax"> {{ tags_url_list }}</p>
+            <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
             {{ endif }}
 
           </div><!-- END .article__meta -->
           {{ endif }}
 
           {{ if main_img|not_empty }}
-          <img src="{{ transform
-            src="{{ main_img }}"
-            width="180"
-            height="120"
-            action="smart"
-          }}" alt="" class="article__img">
+          <div class="summary_img_list">
+          <img src={{ main_img }}
+            width="auto"
+            height="auto"
+            alt={{ alt_img_txt }} class="article__img">
+          </div>
           {{ endif }}
 
+          <div class="summary_text">
           {{ summary|smartypants|markdown }}
+          </div>
 
-          <p class="article__more"><a href="{{ url }}">Keep Reading <i class="fa fa-arrow-right"></i></a></p>
+          <p class="article__more"><a href="{{ url }}">Keep Reading <i class="fa fa-chevron-circle-right"></i></a></p>
           
         </article>
       </li>
@@ -77,13 +76,13 @@
   {{ if total_pages > 1 }}
   <div class="pagination">
     {{ if previous_page }}
-      <a href="{{ previous_page }}" class="pagination__prev">&larr; Prev</a>
+      <a href="{{ previous_page }}" class="pagination__prev"> Prev</a>
     {{ endif }}
 
     <span class="pagination__number">Page {{ current_page }} of {{ total_pages }}</span>
     
     {{ if next_page }}
-      <a href="{{ next_page }}" class="pagination__next">Next &rarr;</a>
+      <a href="{{ next_page }}" class="pagination__next">Next </a>
     {{ endif }}
   </div><!-- END .pagination -->
   {{ endif }}

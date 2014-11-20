@@ -5,7 +5,10 @@
 ###########################################################################################
 
 # Theme name
-theme_name: Keith's Custom
+theme_name: Statarkers
+
+# Site Language
+site_language: "en"
 
 # Theme Strap Line
 strap_line: "Real Athletes Run, Others Just Play Games"
@@ -17,11 +20,17 @@ show_comments: yes
 # Blog
 blog_name: blog
 
+#Social Links
+facebook: https://www.facebook.com/keithaperkins
+twitter: https://twitter.com/keithaperkins
+linkedIn: https://uk.linkedin.com/
+github: https://github.com/
+
 # Global text snippets
 no_results_text: "Sorry, no results found."
 
 # Site Description
-site_desc: "Enter a description which will display in your home page meta description and RSS feed."
+site_desc: "I am a hobbyist runner who is interested in all aspects of endurance running.  This is where I share my adventures, topics, and everything related to running."
 
 # Contact Details
 contact_name: Keith Perkins

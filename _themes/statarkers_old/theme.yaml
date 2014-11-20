@@ -1,0 +1,28 @@
+###########################################################################################
+#
+#  THEME VARIABLES
+#
+###########################################################################################
+
+# Theme name
+theme_name: Keith's Custom
+
+# Theme Strap Line
+strap_line: "Real Athletes Run, Others Just Play Games"
+
+# Comments + Disqus
+disqus_account: perkinsblog
+show_comments: yes
+
+# Blog
+blog_name: blog
+
+# Global text snippets
+no_results_text: "Sorry, no results found."
+
+# Site Description
+site_desc: "I am a hobbyist runner who is interested in all aspects of endurance running.  This is where I share my adventures, topics, and everything related to running. "
+
+# Contact Details
+contact_name: Keith Perkins
+contact_email: keithaperkins@gmail.com

@@ -111,6 +111,7 @@ _environments:
     - 'http://localhost*'
     - '*.dev'
     - '*.localip'
+    - '127.0.0.1'
   live:
     - '*.com'
     - '*.net'
@@ -126,7 +127,7 @@ _log_enabled: true
 #  - error
 #  - fatal  (this is the most-serious level of logged message)
 # Levels less-serious than what you pick will be ignored
-_log_level: info
+_log_level: debug
 
 # Path to your log file
 #  - to define a path absolutely, start your path with a /
@@ -166,7 +167,7 @@ _admin_nav:
   logout:    true
 
 # When you log in, where would you like to start?
-_admin_start_page: pages
+_admin_start_page: logs
 
 # Enable/Disable the ability to add new top level pages via the CP
 _enable_add_top_level_page: true
@@ -195,3 +196,9 @@ _cookies.cipher_mode: MCRYPT_MODE_CBC
 # public, www, htdocs, or httpdocs. Leave this blank unless you're running above web root
 
 _public_path:
+
+# Test Debug
+_display_debug_panel: false
+
+# Added in 1.79
+_markdown_parser: parsedown

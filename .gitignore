@@ -1,23 +1,17 @@
-_cache/
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
+# Statamic files #
+######################
 _cache/*
-
-_cache/_app/content/content.php
-
-_cache/_app/content/content.php
-
-_cache/_app/content/last.php
-
-_cache/_app/content/settings.php
-
-_cache/_app/content/structure.php
-
-_cache/_app/content/structure.php
-
-.htaccess
-
-.htaccess
-
-_cache/_app/cookie/key.php
-
-_cache/_app/cookie/key.php
+!_cache/index.html
+_logs/*
+!_logs/index.html
+LCCTC/*

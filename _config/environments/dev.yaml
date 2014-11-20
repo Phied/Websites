@@ -6,3 +6,4 @@
 
 # Just an example use case
  enable_analytics: yes
+ _display_debug_panel: true
