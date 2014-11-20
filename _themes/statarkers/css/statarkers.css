@@ -8,22 +8,16 @@ body:before{background-color:#FFFFFF;border-bottom:1px solid #FBEED5;border-left
 @media all and (min-width: 81.25em){body:before{/*content:"wide ≥ 1300px (81.25em)"*/}}
 .no-list{margin-top:0;margin-bottom:0;padding-left:0;list-style:none}
 html{font-size:100%;background-color:#FFFFFF;-webkit-font-smoothing:antialiased}
-<<<<<<< HEAD
 body{line-height:1.5em; color:#6b6b6b;font-size:14px;font-style:normal;font-family:'Open Sans',sans-serif;background-color:#EEEEEE;font-weight:400}
-=======
 body{line-height:1.5;color:#6b6b6b;letter-spacing:0.01rem;font-size:17px;font-style:normal;font-family:'Montaga',sans-serif;background-color:#EEEEEE;font-weight:400}
->>>>>>> FETCH_HEAD
 h1{font-size:2.25em;margin-bottom:0}
 h2{font-size:1.5em;margin-bottom:0.5em}
 h3{font-size:1.125em;margin-bottom:0.5em}
 h4{font-size:1em;margin-bottom:0}
 h5{font-size:1em;margin-bottom:0}
 h6{font-size:1em;margin-bottom:0}
-<<<<<<< HEAD
 h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,0.8;);font-family:'Cinzel',cursive; font-weight:600;}
-=======
 h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,0.8;);letter-spacing: -0.02em;font-style:normal;font-family:'Josefin Sans',sans-serif;font-weight:700;}
->>>>>>> FETCH_HEAD
 h4,h5,h6{margin-bottom:0}
 h1+p,h2+p,h3+p,h4+p,h5+p,h6+p{margin-top:0;}
 a{color:#E67E22;text-decoration:none;-webkit-transition:0.3s;-moz-transition:0.3s;transition:0.3s}
