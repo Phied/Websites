@@ -11,7 +11,32 @@ Thumbs.db
 # Statamic files #
 ######################
 _cache/*
+<<<<<<< HEAD
 !_cache/index.html
 _logs/*
 !_logs/index.html
 LCCTC/*
+=======
+
+_cache/_app/content/content.php
+
+_cache/_app/content/content.php
+
+_cache/_app/content/last.php
+
+_cache/_app/content/settings.php
+
+_cache/_app/content/structure.php
+
+_cache/_app/content/structure.php
+
+.htaccess
+
+.htaccess
+
+_cache/_app/cookie/key.php
+
+_cache/_app/cookie/key.php
+
+_logs/
+>>>>>>> FETCH_HEAD
