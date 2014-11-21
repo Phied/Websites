@@ -90,7 +90,10 @@ table tfoot td{text-align:center}
 
 /* Custom CSS */
 /* Banner area */
-header[role="banner"] {background: #DDDDDD url(http://farm3.staticflickr.com/2661/13037281323_f2a92fe43e_o.png) left center no-repeat;height: 200px;width: 100%;padding: 2em 0; }
+/* header[role="banner"] {background: #DDDDDD url(http://farm3.staticflickr.com/2661/13037281323_f2a92fe43e_o.png) left center no-repeat;height: 200px;width: 100%;padding: 2em 0; } */
+/* Color or BW */
+header[role="banner"] {background: #DDDDDD url(https://farm8.staticflickr.com/7474/15652353178_3a387ca11c_o.png) left center no-repeat;background-size:cover; height: 200px;width: 100%;padding: 2em 0; }
+/* header[role="banner"] {background: #DDDDDD url(https://farm9.staticflickr.com/8644/15651895649_c22cdf0ce6_o.png) left center no-repeat;background-size: cover; height: 200px;width: 100%;padding: 2em 0; } */
 .brand a{color: #E67E22;font-weight: 700;letter-spacing: .0725em;font-variant: small-caps;text-shadow: 1px 1px 3px #000000;}
 .strap-line {color: #ffffff;font-size: 1em; font-weight: 900;text-shadow: 1px 1px 3px #000000;}
 
