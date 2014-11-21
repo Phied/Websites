@@ -12,7 +12,6 @@
     {{ endif }}
       <li class="articleList__item">
         <article class="article_entry">
-          <h3><a href="{{ url }}">{{ title }}</a></h3>
           
           {{ if author || date || categories_list || tags_list }}
           <div class="article__meta">
@@ -24,7 +23,7 @@
             {{ endif }}
 
             {{ if date }}
-            <p class="article__date"><i class="fa fa-calendar"></i><time datetime="{{ datestamp format="Y-m-d" }}"> {{ date }}</time></p>
+            <!-- <p class="article__date"><i class="fa fa-calendar"></i><time datetime="{{ datestamp format="Y-m-d" }}"> {{ date }}</time></p> -->
             {{ endif }}
             
             {{ if categories_list && tags_list }}
@@ -44,17 +43,23 @@
 
           {{ if main_img|not_empty }}
           <div class="summary_img_list">
+          <img src="{{ transform
+            src="{{ main_img }}"
+            width="100"
+            height="100"
+            action="smart"
+          }}" alt="" />
+          <!-- <div class="summary_img_list">
           <img src={{ main_img }}
             width="auto"
             height="auto"
-            alt={{ alt_img_txt }} class="article__img">
+            alt={{ alt_img_txt }} class="article__img"> -->
           </div>
           {{ endif }}
-
+          <p><h3><a href="{{ url }}">{{ title }}</a></h3></p>
           <div class="summary_text">
           {{ summary|smartypants|markdown }}
           </div>
-
           <p class="article__more"><a href="{{ url }}">Keep Reading <i class="fa fa-chevron-circle-right"></i></a></p>
           
         </article>

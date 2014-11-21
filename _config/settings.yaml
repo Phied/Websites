@@ -18,8 +18,8 @@ _license_key: 9702a76b-4563-48fe-bb47-d9bc52417d3b
 _language: en
 
 # Change if you are running Statamic in a subdirectory
-_site_root: /
-#_site_root: /~keith/
+#_site_root: /
+_site_root: /~keith/
 
 # Name of your site
 _site_name: Perkinsblog [dot] net
@@ -73,7 +73,8 @@ _enable_smartypants: true
 _theme_cache_bust: false
 
 # Specify where to save transformed images
-_transform_destination: false
+#_transform_destination: false
+_transform_destination: /assets/img/
 
 # allow the use of PHP in Statamic templates
 _allow_php: false
