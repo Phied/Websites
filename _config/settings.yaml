@@ -28,7 +28,7 @@ _site_name: Perkinsblog [dot] net
 _content_root: _content
 
 # Used for permalinks
-_site_url: http://perkinsblog.net/
+_site_url: http://www.perkinsblog.net/
 
 # Folder name of your desired theme
 _theme: statarkers
