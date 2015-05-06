@@ -90,7 +90,7 @@ class Plugin_transform extends Plugin
         $pos_x  = $this->fetchParam('pos_x', 0, 'is_numeric');
         $pos_y  = $this->fetchParam('pos_y', 0, 'is_numeric');
 
-        $quality = $this->fetchParam('quality', '75', 'is_numeric');
+        $quality = $this->fetchParam('quality', Config::get('transform_quality'), 'is_numeric');
 
 
         /*
@@ -124,6 +124,7 @@ class Plugin_transform extends Plugin
         $pixelate  = $this->fetchParam('pixelate', false, 'is_numeric');
         $greyscale = $this->fetchParam(array('greyscale', 'grayscale'), false, false, true);
         $watermark = $this->fetchParam('watermark', false, false, false, false);
+        $invert    = $this->fetchParam('invert', false, false, true);
 
 
         /*
@@ -158,7 +159,8 @@ class Plugin_transform extends Plugin
             'blur'      => $blur,
             'pixelate'  => $pixelate,
             'greyscale' => $greyscale,
-            'modified'  => $last_modified
+            'modified'  => $last_modified,
+            'invert'    => $invert
         );
 
         // Start with a 1 character action flag
@@ -276,6 +278,10 @@ class Plugin_transform extends Plugin
             $image->pixelate($pixelate);
         }
 
+        if ($invert) {
+            $image->invert();
+        }
+
         // Positioning options via ordered pipe settings:
         // source|position|x offset|y offset
         if ($watermark) {
@@ -306,6 +312,6 @@ class Plugin_transform extends Plugin
             throw new Exception('Could not write new images. Try checking your file permissions.');
         }
 
-        return File::cleanURL($new_image_path);
+	    return File::cleanURL(URL::prependSiteRoot($new_image_path));
     }
 }
