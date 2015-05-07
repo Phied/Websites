@@ -64,40 +64,75 @@
 
 {{ if segment_1 == "blog" }}
 
-<ul class="social">
-<!-- Twitter -->
-<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ permalink }}" data-count-url="{{ permalink }}" data-via="keithaperkins" data-lang="en">Tweet</a></li>
+<div id="buttons">
+<div class="facebook button">
+  <i class="icon-facebook"></i>
+  <div class="social-container fb">
+    <div class="slide">
+      <iframe src="//www.facebook.com/plugins/like.php?href={{ permalink }}&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=198872863516638" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:81px; height:21px; color:#FFF" allowtransparency="true">
+      </iframe>
+    </div>
+     Facebook
+  </div>
+</div>
+<div class="twitter button">
+  <i class="icon-twitter"></i>
+  <div class="social-container tw">
+    <div class="slide">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ permalink }}" data-count-url="{{ permalink }}" data-via="keithaperkins" data-lang="en">
+      Tweet </a>
+      <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  </script>
+    </div>
+     Twitter
+  </div>
+</div>
+<div class="google button">
+  <i class="icon-google-plus"></i>
+  <div class="social-container tw">
+    <div class="slide">
+      <!-- Place this tag where you want the +1 button to render. -->
+      <div class="g-plusone" data-size="medium">
+      </div>
+      <!-- Place this tag after the last +1 button tag. -->
+      <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script');
+      po.type = 'text/javascript';
+      po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(po, s);
+    }
+    )();
+  </script>
+    </div>
+     Google+
+  </div>
+</div>
 
-<!-- Facebook Like -->
-<li><div class="fb-like" data-href="{{ permalink }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+<div class="linkedin button">
+  <i class="icon-linkedin"></i>
+  <div class="social-container tw">
+    <div class="slide">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript">
+ lang: en_US
+      </script>
+      <script type="IN/Share"></script>
+    </div>
+     LinkedIN
+  </div>
+</div>
+</div>
 
-<!-- Place this tag where you want the +1 button to render. -->
-<li><div class="g-plusone" data-size="medium"></div></li>
 
-
-</ul>
-<!-- Twitter Script -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-<!-- Facebook Script -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=198872863516638&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Google Plus Script -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
+<br />
 <hr>
 
 {{ if show_comments }}
