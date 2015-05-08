@@ -13,7 +13,7 @@
       {{ if author|not_empty }}
       {{ member:profile member="{author}" }}
       <!-- <p class="article__author">{{ first_name }} {{ last_name }}</p> -->
-      <p class="article__author"> {{ first_name }} {{ last_name }} &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time>
+      <p class="article__author"><i>By</i> {{ first_name }} {{ last_name }} &nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;<time pubdate datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
       {{ /member:profile }}
       {{ endif }}
     
@@ -57,9 +57,9 @@
   {{ content }}
   </div><!-- END .main-content -->
   
-  <!-- <footer class="article__footer">
-    <a href="/">back</a>
-  </footer> -->
+  <footer class="article__footer">
+    <i> Enjoyed the article?  Share with your friends by clicking below! </i>
+  </footer>
 </article>
 
 {{ if segment_1 == "blog" }}
@@ -130,10 +130,31 @@
 </div>
 </div>
 
-
 <br />
+
 <hr>
 
+{{ if author|not_empty }}
+{{ member:profile member="{author}" }}
+<div class="summary_img_list">
+  <img src="{{ transform
+            src="{{ profilepicture }}"
+            width="100"
+            height="100"
+            action="resize"
+          }}" alt="" />
+</div>
+<h3 style="margin-top: -2px"> About {{ first_name }} {{ last_name }} </h3>
+<div class="summary_text">
+{{ about }}
+</div>
+<br />
+
+<hr>
+ {{ /member:profile }}
+ {{ endif }}
+
+<br />
 {{ if show_comments }}
 <div class="comments">
   <h3>Leave Your Comments</h3>

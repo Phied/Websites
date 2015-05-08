@@ -6,7 +6,7 @@ gplusprofile: https://www.google.com/+KeithPerkins1
 twitterprofile: https://www.twitter.com/keithaperkins
 url_image: https://farm8.staticflickr.com/7474/15652353178_3a387ca11c_o.png 
 keywords: "running, distance, sports, training, technology, cross country, track, competition, athlete, adventure, endurance"
-meta_desc: "I am a hobbyist runner who is interested in all aspects of endurance running.  This is where I share my adventures, topics, and everything related to running. "
+meta_desc: "Father, runner, and technology geek.  I consider myself a hobbyist runner that is interested in every aspect of endurance running.  Hoping to have many years left in the "Average Joe" running world, I want to share my hopes and dreams and my passion for running with others. "
 categories_url_list: "help_me"
 summary: ok
 segment_1: 1-blog

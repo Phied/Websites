@@ -133,13 +133,23 @@ i.fa-home, i.fa-envelope, i.fa-twitter-square, i.fa-rss-square {font-size: 1.5em
 
 footer[role="contentinfo"] {background: #DDDDDD;border-top: solid .1em #CCCCCC;padding: 2em; color: #6b6b6b; }
 
+/* Article Footer */
+.article__footer {
+  text-align: center;
+  padding-top: 25px;
+}
+
+/* Comments */
+.comments {
+  text-align: center;
+}
 /* New Social Links */
 
 #buttons {
     /* width: 260px; for all 4 buttons */
     width: 360px;
     overflow: hidden;
-    margin: 50px auto 0;
+    margin: 15px auto 0;
 }
 
 .button {

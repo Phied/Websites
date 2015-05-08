@@ -157,7 +157,7 @@ _admin_theme: ascent
 
 # Customize which pages show in the control panel
 _admin_nav:
-  dashboard: false
+  dashboard: true
   pages:     true
   members:   true
   account:   true
