@@ -43,12 +43,13 @@
 
           {{ if main_img|not_empty }}
           <div class="summary_img_list">
+          <a href="{{ url }}">
           <img src="{{ transform
             src="{{ main_img }}"
-            width="100"
-            height="100"
+            width="110"
+            height="110"
             action="smart"
-          }}" alt="" />
+          }}" alt="" /></a>
           <!-- <div class="summary_img_list">
           <img src={{ main_img }}
             width="auto"
@@ -58,7 +59,10 @@
           {{ endif }}
           <p><h3><a href="{{ url }}">{{ title }}</a></h3></p>
           <div class="summary_text">
-          {{ summary|smartypants|markdown }}
+          {{ truncate:words limit="50" ending="&hellip;" }}
+            {{ summary|smartypants|markdown }}
+          {{ /truncate:words }}
+          <!-- {{ summary|smartypants|markdown }} -->
           </div>
           <p class="article__more"><a href="{{ url }}">Keep Reading <i class="fa fa-chevron-circle-right"></i></a></p>
           
@@ -81,13 +85,13 @@
   {{ if total_pages > 1 }}
   <div class="pagination">
     {{ if previous_page }}
-      <a href="{{ previous_page }}" class="pagination__prev"> Prev</a>
+    <b><a href="{{ previous_page }}" class="pagination__prev"> Prev</a></b>
     {{ endif }}
 
     <span class="pagination__number">Page {{ current_page }} of {{ total_pages }}</span>
     
     {{ if next_page }}
-      <a href="{{ next_page }}" class="pagination__next">Next </a>
+     <b><a href="{{ next_page }}" class="pagination__next">Next </a></b>
     {{ endif }}
   </div><!-- END .pagination -->
   {{ endif }}

@@ -6,6 +6,11 @@ body:before{background-color:#FDFDFD;border-bottom:1px solid #FBEED5;border-left
 @media all and (min-width: 63.8125em){body:before{/*content:"desktopTweak ≥ 1021px (63.8125em)"*/}}
 @media all and (min-width: 61.25em){body:before{/*content:"desktop ≥ 980px (61.25em)"*/}}
 @media all and (min-width: 81.25em){body:before{/*content:"wide ≥ 1300px (81.25em)"*/}}
+@media screen and (max-width: 500px) {
+/* applies only if the screen is narrower than 500px */
+  div.summary_img_list {display:none;}
+  div.summary__text {width:100%;}
+}
 .no-list{margin-top:0;margin-bottom:0;padding-left:0;list-style:none}
 html{font-size:100%;background-color:#FFFFFF;-webkit-font-smoothing:antialiased}
 body{line-height:1.5em; color:#6b6b6b;font-size:14px;font-style:normal;font-family:'Open Sans',sans-serif;background-color:#FDFDFD;font-weight:400}
@@ -118,19 +123,20 @@ p.article__date, p.article__author, p.article__tax, p.article__more{color: rgba(
 .article_entry h3 {margin-left: .5em; margin-bottom: -1.5em;}
 .article_entry:after {content: "";display: table;clear: both;}
 p.article__date {text-align: right;}
-p.article__more {clear:both;text-align: right;margin-top: -1em;padding-right: 1em;}
+p.article__more {/*clear:both;*/text-align: right;margin-top: -1em;padding-right: 1em;}
 
 /*Custom Links*/
 .summary_text a, .article__main a, .article__lead a {border-bottom: 2px dashed #E67E22; text-decoration: none; color: #E67E22;}
 .summary_text a:hover, .article__main a:hover, .article__lead a:hover {border-bottom-style: dotted;}
 .summary_text a:active, .article__main a:active, .article__lead a:active{border-bottom-style: solid;}
 .summary_text a:hover:before, .article__main a:hover:before, .article__lead a:hover:before{color: rgba(0,0,0,0.8);}
-
 small a, small a:visited {color: #6b6b6b;}
+
+/* Display text in article and summary as inline */
+.articleList {display: inline;}
 
 /*Font awesome icons normalization*/
 i.fa-home, i.fa-envelope, i.fa-twitter-square, i.fa-rss-square {font-size: 1.5em;}
-
 footer[role="contentinfo"] {background: #DDDDDD;border-top: solid .1em #CCCCCC;padding: 2em; color: #6b6b6b; }
 
 /* Article Footer */
